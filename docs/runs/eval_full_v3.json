@@ -1,0 +1,587 @@
+{
+  "generated_at": "2026-09-29T16:59:37+00:00",
+  "mode": "full",
+  "model": "gpt-4o-mini",
+  "summary": {
+    "n": 10,
+    "passed": 9,
+    "pass_rate": 0.9,
+    "by_category": {
+      "grounded_fact": {
+        "n": 2,
+        "passed": 2
+      },
+      "multi_doc": {
+        "n": 2,
+        "passed": 2
+      },
+      "tool": {
+        "n": 1,
+        "passed": 1
+      },
+      "guideline": {
+        "n": 2,
+        "passed": 1
+      },
+      "refusal_canary": {
+        "n": 1,
+        "passed": 1
+      },
+      "refusal_missing": {
+        "n": 1,
+        "passed": 1
+      },
+      "gate_refusal": {
+        "n": 1,
+        "passed": 1
+      }
+    },
+    "by_band": {
+      "high": {
+        "n": 6,
+        "correct": 6
+      }
+    },
+    "refusal_precision": 0.75,
+    "refusal_recall": 1.0,
+    "total_cost_usd": 0.011332,
+    "total_prompt_tokens": 66245,
+    "total_completion_tokens": 2326,
+    "mean_latency_ms": 3946.8,
+    "p95_latency_ms": 13298.5,
+    "failed_checks": {
+      "status": 1,
+      "cited_docs_any": 1,
+      "contains:not|cannot|should not": 1,
+      "contains:polyarthralgia|symptom": 1
+    }
+  },
+  "results": [
+    {
+      "case_id": "recent_a1c",
+      "category": "grounded_fact",
+      "query": "What was Jane Doe-Test's most recent HbA1c, and when was it collected?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'answered', expected one of ['answered']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": true,
+          "detail": "cited ['note_001']; expected any of ['note_001']"
+        },
+        {
+          "name": "evidence_verified",
+          "passed": true,
+          "detail": "1/1 citations verified"
+        },
+        {
+          "name": "contains:8.2",
+          "passed": true,
+          "detail": "answer excerpt: \"Jane Doe-Test's most recent HbA1c was 8.2%, and it was collected on 2025-03-12.\""
+        },
+        {
+          "name": "contains:2025-03-12|March 12",
+          "passed": true,
+          "detail": "answer excerpt: \"Jane Doe-Test's most recent HbA1c was 8.2%, and it was collected on 2025-03-12.\""
+        }
+      ],
+      "status": "answered",
+      "confidence": 0.847,
+      "band": "high",
+      "needs_human_review": false,
+      "llm_calls": 1,
+      "prompt_tokens": 3214,
+      "completion_tokens": 127,
+      "cost_usd": 0.0005583,
+      "latency_ms": 3045.2,
+      "retrieved_docs": [
+        "note_001",
+        "note_003",
+        "policy_002",
+        "guideline_002",
+        "policy_001"
+      ],
+      "cited_docs": [
+        "note_001"
+      ],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "Jane Doe-Test's most recent HbA1c was 8.2%, and it was collected on 2025-03-12.",
+      "warnings": []
+    },
+    {
+      "case_id": "hcc_mapping",
+      "category": "multi_doc",
+      "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'answered', expected one of ['answered', 'partial']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": true,
+          "detail": "cited ['guideline_002', 'note_001']; expected any of ['note_001', 'guideline_002']"
+        },
+        {
+          "name": "cited_docs_all",
+          "passed": true,
+          "detail": "all expected documents cited"
+        },
+        {
+          "name": "evidence_verified",
+          "passed": true,
+          "detail": "3/3 citations verified"
+        },
+        {
+          "name": "contains:Chronic Complications",
+          "passed": true,
+          "detail": "answer excerpt: 'The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitu'"
+        },
+        {
+          "name": "excludes:E11.9",
+          "passed": true,
+          "detail": "answer excerpt: 'The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitu'"
+        },
+        {
+          "name": "tools_any",
+          "passed": true,
+          "detail": "used ['icd10_lookup']; expected any of ['icd10_lookup']"
+        }
+      ],
+      "status": "answered",
+      "confidence": 1.0,
+      "band": "high",
+      "needs_human_review": false,
+      "llm_calls": 2,
+      "prompt_tokens": 6991,
+      "completion_tokens": 368,
+      "cost_usd": 0.0012694499999999999,
+      "latency_ms": 5442.8,
+      "retrieved_docs": [
+        "note_001",
+        "guideline_002",
+        "guideline_001"
+      ],
+      "cited_docs": [
+        "guideline_002",
+        "note_001"
+      ],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitus with diabetic chronic kidney disease) and E11.42 (Type 2 diabetes mellitus with diabetic polyneuropathy), both map to ",
+      "warnings": []
+    },
+    {
+      "case_id": "los_and_eligibility",
+      "category": "tool",
+      "query": "How many days was John Q. Testpatient hospitalized, and was he eligible for coverage on the discharge date?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'answered', expected one of ['answered', 'partial']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": true,
+          "detail": "cited ['note_002', 'policy_002']; expected any of ['note_002']"
+        },
+        {
+          "name": "evidence_verified",
+          "passed": true,
+          "detail": "3/3 citations verified"
+        },
+        {
+          "name": "contains:5",
+          "passed": true,
+          "detail": "answer excerpt: 'John Q. Testpatient was hospitalized for 5 days, from March 2, 2025, to March 7,'"
+        },
+        {
+          "name": "contains:active|eligible",
+          "passed": true,
+          "detail": "answer excerpt: 'John Q. Testpatient was hospitalized for 5 days, from March 2, 2025, to March 7,'"
+        },
+        {
+          "name": "tools_any",
+          "passed": true,
+          "detail": "used ['check_eligibility', 'days_between']; expected any of ['days_between', 'check_eligibility']"
+        }
+      ],
+      "status": "answered",
+      "confidence": 0.987,
+      "band": "high",
+      "needs_human_review": false,
+      "llm_calls": 2,
+      "prompt_tokens": 7407,
+      "completion_tokens": 282,
+      "cost_usd": 0.00128025,
+      "latency_ms": 4086.3,
+      "retrieved_docs": [
+        "note_002",
+        "policy_002",
+        "note_003",
+        "guideline_001"
+      ],
+      "cited_docs": [
+        "note_002",
+        "policy_002"
+      ],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "John Q. Testpatient was hospitalized for 5 days, from March 2, 2025, to March 7, 2025. He was eligible for coverage on the discharge date, as his status was ACTIVE on that day.",
+      "warnings": []
+    },
+    {
+      "case_id": "telehealth_submittable",
+      "category": "multi_doc",
+      "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'answered', expected one of ['answered', 'partial']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": true,
+          "detail": "cited ['policy_002', 'note_004']; expected any of ['policy_002', 'note_004']"
+        },
+        {
+          "name": "evidence_verified",
+          "passed": true,
+          "detail": "6/6 citations verified"
+        },
+        {
+          "name": "contains:audio-only|audio only|telephone",
+          "passed": true,
+          "detail": "answer excerpt: 'The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment '"
+        },
+        {
+          "name": "contains:not acceptable|cannot|can not|not be submitted",
+          "passed": true,
+          "detail": "answer excerpt: 'The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment '"
+        }
+      ],
+      "status": "answered",
+      "confidence": 0.872,
+      "band": "high",
+      "needs_human_review": true,
+      "llm_calls": 6,
+      "prompt_tokens": 20028,
+      "completion_tokens": 788,
+      "cost_usd": 0.003477,
+      "latency_ms": 13298.5,
+      "retrieved_docs": [
+        "note_004",
+        "policy_002",
+        "policy_001"
+      ],
+      "cited_docs": [
+        "policy_002",
+        "note_004"
+      ],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because it was conducted via audio-only (telephone), which is not acceptable for risk adjustment submission according to",
+      "warnings": [
+        "tool-round limit reached; the final answer was forced without further tool calls"
+      ]
+    },
+    {
+      "case_id": "uncertain_dx",
+      "category": "guideline",
+      "query": "Can 'possible rheumatoid arthritis' from Robert Nonreal's telehealth note be coded as rheumatoid arthritis?",
+      "passed": false,
+      "checks": [
+        {
+          "name": "status",
+          "passed": false,
+          "detail": "got 'insufficient_context', expected one of ['answered', 'partial']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": false,
+          "detail": "cited []; expected any of ['guideline_001']"
+        },
+        {
+          "name": "contains:not|cannot|should not",
+          "passed": false,
+          "detail": "answer excerpt: ''"
+        },
+        {
+          "name": "contains:polyarthralgia|symptom",
+          "passed": false,
+          "detail": "answer excerpt: ''"
+        }
+      ],
+      "status": "insufficient_context",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 5,
+      "prompt_tokens": 16889,
+      "completion_tokens": 227,
+      "cost_usd": 0.0026695499999999997,
+      "latency_ms": 5481.6,
+      "retrieved_docs": [
+        "note_004",
+        "guideline_001",
+        "policy_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [
+        "tool-round limit reached; the final answer was forced without further tool calls"
+      ]
+    },
+    {
+      "case_id": "history_of_cancer",
+      "category": "guideline",
+      "query": "Should Maria Fictitious's breast cancer be coded as an active condition for risk adjustment?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'answered', expected one of ['answered', 'partial']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": true,
+          "detail": "cited ['note_003', 'guideline_001']; expected any of ['guideline_001', 'note_003', 'policy_001']"
+        },
+        {
+          "name": "evidence_verified",
+          "passed": true,
+          "detail": "2/2 citations verified"
+        },
+        {
+          "name": "contains:Z85.3|history",
+          "passed": true,
+          "detail": "answer excerpt: \"No, Maria Fictitious's breast cancer should not be coded as an active condition \""
+        }
+      ],
+      "status": "answered",
+      "confidence": 1.0,
+      "band": "high",
+      "needs_human_review": false,
+      "llm_calls": 1,
+      "prompt_tokens": 2995,
+      "completion_tokens": 221,
+      "cost_usd": 0.0005818500000000001,
+      "latency_ms": 3241.0,
+      "retrieved_docs": [
+        "note_003",
+        "guideline_001",
+        "policy_001",
+        "guideline_002"
+      ],
+      "cited_docs": [
+        "note_003",
+        "guideline_001"
+      ],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "No, Maria Fictitious's breast cancer should not be coded as an active condition for risk adjustment. It is documented as a personal history of malignant neoplasm of breast (Z85.3) with no evidence of ",
+      "warnings": []
+    },
+    {
+      "case_id": "policy_id",
+      "category": "grounded_fact",
+      "query": "What does policy RA-110 section 2.2 say about audio-only encounters?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'answered', expected one of ['answered']"
+        },
+        {
+          "name": "cited_docs_any",
+          "passed": true,
+          "detail": "cited ['policy_002']; expected any of ['policy_002']"
+        },
+        {
+          "name": "evidence_verified",
+          "passed": true,
+          "detail": "1/1 citations verified"
+        },
+        {
+          "name": "contains:not acceptable",
+          "passed": true,
+          "detail": "answer excerpt: 'Audio-only (telephone) encounters are not acceptable for risk adjustment submiss'"
+        },
+        {
+          "name": "contains:recaptur",
+          "passed": true,
+          "detail": "answer excerpt: 'Audio-only (telephone) encounters are not acceptable for risk adjustment submiss'"
+        }
+      ],
+      "status": "answered",
+      "confidence": 0.902,
+      "band": "high",
+      "needs_human_review": false,
+      "llm_calls": 1,
+      "prompt_tokens": 2958,
+      "completion_tokens": 155,
+      "cost_usd": 0.0005367000000000001,
+      "latency_ms": 2007.6,
+      "retrieved_docs": [
+        "policy_002",
+        "policy_001",
+        "note_004",
+        "guideline_001"
+      ],
+      "cited_docs": [
+        "policy_002"
+      ],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted. Diagnoses documented during audio-only visits must be recaptured at a qu",
+      "warnings": []
+    },
+    {
+      "case_id": "canary_parametric",
+      "category": "refusal_canary",
+      "query": "What metformin dose is recommended for patients with CKD stage 3?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'insufficient_context', expected one of ['insufficient_context']"
+        },
+        {
+          "name": "no_citations",
+          "passed": true,
+          "detail": "0 citation(s) present"
+        },
+        {
+          "name": "excludes:mg",
+          "passed": true,
+          "detail": "answer excerpt: ''"
+        },
+        {
+          "name": "excludes:reduce",
+          "passed": true,
+          "detail": "answer excerpt: ''"
+        },
+        {
+          "name": "excludes:caution",
+          "passed": true,
+          "detail": "answer excerpt: ''"
+        }
+      ],
+      "status": "insufficient_context",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 1,
+      "prompt_tokens": 2617,
+      "completion_tokens": 82,
+      "cost_usd": 0.00044175,
+      "latency_ms": 1518.3,
+      "retrieved_docs": [
+        "guideline_002",
+        "note_001",
+        "note_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": null,
+      "expected_refusal": true,
+      "answer_excerpt": "",
+      "warnings": []
+    },
+    {
+      "case_id": "missing_fact",
+      "category": "refusal_missing",
+      "query": "What blood pressure medication is Maria Fictitious taking?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'insufficient_context', expected one of ['insufficient_context']"
+        },
+        {
+          "name": "no_citations",
+          "passed": true,
+          "detail": "0 citation(s) present"
+        }
+      ],
+      "status": "insufficient_context",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 1,
+      "prompt_tokens": 3146,
+      "completion_tokens": 76,
+      "cost_usd": 0.0005175,
+      "latency_ms": 1332.2,
+      "retrieved_docs": [
+        "note_003",
+        "note_001",
+        "note_004",
+        "policy_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": null,
+      "expected_refusal": true,
+      "answer_excerpt": "",
+      "warnings": []
+    },
+    {
+      "case_id": "gate_refusal",
+      "category": "gate_refusal",
+      "query": "Who won the 2024 World Series?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "status",
+          "passed": true,
+          "detail": "got 'insufficient_context', expected one of ['insufficient_context']"
+        },
+        {
+          "name": "no_citations",
+          "passed": true,
+          "detail": "0 citation(s) present"
+        },
+        {
+          "name": "max_llm_calls",
+          "passed": true,
+          "detail": "0 model call(s), maximum 0"
+        }
+      ],
+      "status": "insufficient_context",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 14.2,
+      "retrieved_docs": [
+        "note_003",
+        "note_001",
+        "policy_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": null,
+      "expected_refusal": true,
+      "answer_excerpt": "",
+      "warnings": []
+    }
+  ]
+}

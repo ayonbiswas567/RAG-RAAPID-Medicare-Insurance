@@ -1,0 +1,115 @@
+[
+  {
+    "id": "recent_a1c",
+    "category": "grounded_fact",
+    "query": "What was Jane Doe-Test's most recent HbA1c, and when was it collected?",
+    "expected": {
+      "statuses": ["answered"],
+      "cited_docs_any": ["note_001"],
+      "answer_must_contain": ["8.2", "2025-03-12|March 12"]
+    },
+    "notes": "The note holds two dated A1c values (7.6 in January, 8.2 on 2025-03-12); the answer must pick the later one and cite the lab section."
+  },
+  {
+    "id": "hcc_mapping",
+    "category": "multi_doc",
+    "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+    "expected": {
+      "statuses": ["answered", "partial"],
+      "cited_docs_all": ["note_001"],
+      "cited_docs_any": ["note_001", "guideline_002"],
+      "tools_any": ["icd10_lookup"],
+      "answer_must_contain": ["Chronic Complications"],
+      "answer_must_not_contain": ["E11.9"]
+    },
+    "notes": "Needs the patient's Assessment chunk (document anchoring) and the ICD-10 tool. E11.9 appears only as a guideline example; attributing it to the patient is the misattribution failure seen in Step 4."
+  },
+  {
+    "id": "los_and_eligibility",
+    "category": "tool",
+    "query": "How many days was John Q. Testpatient hospitalized, and was he eligible for coverage on the discharge date?",
+    "expected": {
+      "statuses": ["answered", "partial"],
+      "cited_docs_any": ["note_002"],
+      "tools_any": ["days_between", "check_eligibility"],
+      "answer_must_contain": ["5", "active|eligible"]
+    },
+    "notes": "Two tools in one question; the inpatient date of service is the discharge date (policy_002 section 5.1)."
+  },
+  {
+    "id": "telehealth_submittable",
+    "category": "multi_doc",
+    "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+    "expected": {
+      "statuses": ["answered", "partial"],
+      "cited_docs_any": ["policy_002", "note_004"],
+      "answer_must_contain": ["audio-only|audio only|telephone", "not acceptable|cannot|can not|not be submitted"]
+    },
+    "notes": "A rule in policy_002 (2.2) applied to facts in note_004; the eligibility tool supplies a second, independent reason (retroactive termination)."
+  },
+  {
+    "id": "uncertain_dx",
+    "category": "guideline",
+    "query": "Can 'possible rheumatoid arthritis' from Robert Nonreal's telehealth note be coded as rheumatoid arthritis?",
+    "expected": {
+      "statuses": ["answered", "partial"],
+      "cited_docs_any": ["guideline_001"],
+      "answer_must_contain": ["not|cannot|should not", "polyarthralgia|symptom"]
+    },
+    "notes": "Outpatient uncertain-diagnosis convention (guideline_001 section 2); the symptom code is what gets reported."
+  },
+  {
+    "id": "history_of_cancer",
+    "category": "guideline",
+    "query": "Should Maria Fictitious's breast cancer be coded as an active condition for risk adjustment?",
+    "expected": {
+      "statuses": ["answered", "partial"],
+      "cited_docs_any": ["guideline_001", "note_003", "policy_001"],
+      "answer_must_contain": ["Z85.3|history"]
+    },
+    "notes": "Resolved condition with no active treatment -> personal history code, not an active malignancy (guideline_001 section 4, policy_001 section 4.3)."
+  },
+  {
+    "id": "policy_id",
+    "category": "grounded_fact",
+    "query": "What does policy RA-110 section 2.2 say about audio-only encounters?",
+    "expected": {
+      "statuses": ["answered"],
+      "cited_docs_any": ["policy_002"],
+      "answer_must_contain": ["not acceptable", "recaptur"]
+    },
+    "notes": "Identifier-driven retrieval: RA-110 anchors policy_002 and BM25 matches the exact token."
+  },
+  {
+    "id": "canary_parametric",
+    "category": "refusal_canary",
+    "query": "What metformin dose is recommended for patients with CKD stage 3?",
+    "expected": {
+      "statuses": ["insufficient_context"],
+      "no_citations": true,
+      "answer_must_not_contain": ["mg", "reduce", "caution"]
+    },
+    "notes": "The model knows this from training; the corpus does not state it and no tool returns it. Retrieval passes the gate (metformin appears in note_001), so this tests the model-side refusal. Prompt v1 leaked here."
+  },
+  {
+    "id": "missing_fact",
+    "category": "refusal_missing",
+    "query": "What blood pressure medication is Maria Fictitious taking?",
+    "expected": {
+      "statuses": ["insufficient_context"],
+      "no_citations": true
+    },
+    "notes": "In-corpus patient, fact absent: the note records a blood pressure but no antihypertensive."
+  },
+  {
+    "id": "gate_refusal",
+    "category": "gate_refusal",
+    "query": "Who won the 2024 World Series?",
+    "expected": {
+      "statuses": ["insufficient_context"],
+      "no_citations": true,
+      "max_llm_calls": 0
+    },
+    "notes": "Off-corpus. Only lexical overlap is the token 2024 (BM25 about 3.7, under the 5.0 threshold); dense 0.08. Must be refused by the gate with zero model calls."
+  }
+]

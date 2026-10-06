@@ -1,0 +1,17 @@
+# Two containers from the same image: the HTTP API and the Streamlit UI.
+# Not built in the development environment; see the Dockerfile note.
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    env_file: .env            # OPENAI_API_KEY and any overrides
+    environment:
+      - HF_HUB_OFFLINE=1
+      - PHI_POLICY=flag
+  ui:
+    build: .
+    command: ["python", "-m", "streamlit", "run", "src/raapid_rag/ui/app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    ports: ["8501:8501"]
+    env_file: .env
+    environment:
+      - HF_HUB_OFFLINE=1

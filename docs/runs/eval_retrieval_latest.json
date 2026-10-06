@@ -1,0 +1,451 @@
+{
+  "generated_at": "2026-10-04T14:22:34+00:00",
+  "mode": "retrieval",
+  "model": "none",
+  "prompt_version": "",
+  "summary": {
+    "n": 10,
+    "passed": 10,
+    "pass_rate": 1.0,
+    "by_category": {
+      "grounded_fact": {
+        "n": 2,
+        "passed": 2
+      },
+      "multi_doc": {
+        "n": 2,
+        "passed": 2
+      },
+      "tool": {
+        "n": 1,
+        "passed": 1
+      },
+      "guideline": {
+        "n": 2,
+        "passed": 2
+      },
+      "refusal_canary": {
+        "n": 1,
+        "passed": 1
+      },
+      "refusal_missing": {
+        "n": 1,
+        "passed": 1
+      },
+      "gate_refusal": {
+        "n": 1,
+        "passed": 1
+      }
+    },
+    "by_band": {},
+    "refusal_precision": 1.0,
+    "refusal_recall": 0.3333333333333333,
+    "total_cost_usd": 0.0,
+    "total_prompt_tokens": 0,
+    "total_completion_tokens": 0,
+    "mean_latency_ms": 84.7,
+    "p95_latency_ms": 354.1,
+    "failed_checks": {}
+  },
+  "results": [
+    {
+      "case_id": "recent_a1c",
+      "category": "grounded_fact",
+      "query": "What was Jane Doe-Test's most recent HbA1c, and when was it collected?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['note_001', 'note_003', 'policy_002', 'guideline_002', 'policy_001']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 129.0,
+      "retrieved_docs": [
+        "note_001",
+        "note_003",
+        "policy_002",
+        "guideline_002",
+        "policy_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "hcc_mapping",
+      "category": "multi_doc",
+      "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['note_001', 'guideline_002', 'guideline_001']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 354.1,
+      "retrieved_docs": [
+        "note_001",
+        "guideline_002",
+        "guideline_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "los_and_eligibility",
+      "category": "tool",
+      "query": "How many days was John Q. Testpatient hospitalized, and was he eligible for coverage on the discharge date?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['note_002', 'policy_002', 'note_003', 'guideline_001']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 60.9,
+      "retrieved_docs": [
+        "note_002",
+        "policy_002",
+        "note_003",
+        "guideline_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "telehealth_submittable",
+      "category": "multi_doc",
+      "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['note_004', 'policy_002', 'policy_001']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 49.8,
+      "retrieved_docs": [
+        "note_004",
+        "policy_002",
+        "policy_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "uncertain_dx",
+      "category": "guideline",
+      "query": "Can 'possible rheumatoid arthritis' from Robert Nonreal's telehealth note be coded as rheumatoid arthritis?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['note_004', 'guideline_001', 'policy_002']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 61.6,
+      "retrieved_docs": [
+        "note_004",
+        "guideline_001",
+        "policy_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "history_of_cancer",
+      "category": "guideline",
+      "query": "Should Maria Fictitious's breast cancer be coded as an active condition for risk adjustment?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['note_003', 'guideline_001', 'policy_001', 'guideline_002']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 47.4,
+      "retrieved_docs": [
+        "note_003",
+        "guideline_001",
+        "policy_001",
+        "guideline_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "policy_id",
+      "category": "grounded_fact",
+      "query": "What does policy RA-110 section 2.2 say about audio-only encounters?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_passed",
+          "passed": true,
+          "detail": "got 'retrieval_only'"
+        },
+        {
+          "name": "retrieval_hit",
+          "passed": true,
+          "detail": "retrieved ['policy_002', 'policy_001', 'note_004', 'guideline_001']"
+        }
+      ],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 53.6,
+      "retrieved_docs": [
+        "policy_002",
+        "policy_001",
+        "note_004",
+        "guideline_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": true,
+      "expected_refusal": false,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "canary_parametric",
+      "category": "refusal_canary",
+      "query": "What metformin dose is recommended for patients with CKD stage 3?",
+      "passed": true,
+      "checks": [],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 24.5,
+      "retrieved_docs": [
+        "guideline_002",
+        "note_001",
+        "note_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": null,
+      "expected_refusal": true,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "missing_fact",
+      "category": "refusal_missing",
+      "query": "What blood pressure medication is Maria Fictitious taking?",
+      "passed": true,
+      "checks": [],
+      "status": "retrieval_only",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 43.0,
+      "retrieved_docs": [
+        "note_003",
+        "note_001",
+        "note_004",
+        "policy_001"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": null,
+      "expected_refusal": true,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "language model not configured (no OPENAI_API_KEY, or --no-llm); returning retrieved evidence only"
+      ],
+      "caveats": [],
+      "tools_called": []
+    },
+    {
+      "case_id": "gate_refusal",
+      "category": "gate_refusal",
+      "query": "Who won the 2024 World Series?",
+      "passed": true,
+      "checks": [
+        {
+          "name": "gate_refused",
+          "passed": true,
+          "detail": "got 'insufficient_context'"
+        }
+      ],
+      "status": "insufficient_context",
+      "confidence": 0.0,
+      "band": "low",
+      "needs_human_review": true,
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 22.8,
+      "retrieved_docs": [
+        "note_003",
+        "note_001",
+        "policy_002"
+      ],
+      "cited_docs": [],
+      "retrieval_hit": null,
+      "expected_refusal": true,
+      "answer_excerpt": "",
+      "warnings": [],
+      "missing_information": [
+        "No sufficiently relevant passage was found in the corpus for this question (gate: low_relevance(best_dense=0.080<0.37, best_bm25=3.70<5.0))."
+      ],
+      "caveats": [],
+      "tools_called": []
+    }
+  ]
+}

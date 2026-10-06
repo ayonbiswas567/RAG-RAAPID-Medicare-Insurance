@@ -1,0 +1,339 @@
+{
+  "generated_at": "2026-09-29T16:06:19+00:00",
+  "model": "gpt-4o-mini",
+  "fault": "bad_citation",
+  "runs": [
+    {
+      "prompt_version": "v2",
+      "label": "recent_a1c",
+      "query": "What was Jane Doe-Test's most recent HbA1c, and what was the prior value?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.435,
+        "best_bm25": 8.75,
+        "chunk_ids": [
+          "note_001#c03",
+          "note_001#c01",
+          "note_001#c05",
+          "guideline_001#c04",
+          "policy_001#c00"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "answered",
+      "answer": "Jane Doe-Test's most recent HbA1c was 8.2%, collected on 2025-03-12. The prior value was 7.6%, recorded in January 2025.",
+      "self_reported_confidence": 1.0,
+      "missing_information": [],
+      "reasoning_summary": "The answer is derived from the laboratory results and history of present illness sections, which provide the most recent and prior HbA1c values.",
+      "citations": [
+        {
+          "chunk_id": "note_001#c05",
+          "evidence": "HbA1c 8.2% (collected 2025-03-12).",
+          "doc_id": "note_001",
+          "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+          "section": "Laboratory Results",
+          "date": "2025-03-14",
+          "verified": true
+        },
+        {
+          "chunk_id": "note_001#c03",
+          "evidence": "Her prior HbA1c in January 2025 was 7.6%.",
+          "doc_id": "note_001",
+          "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+          "section": "History of Present Illness",
+          "date": "2025-03-14",
+          "verified": true
+        }
+      ],
+      "tool_calls": [],
+      "repair_attempts": 1,
+      "validation_errors": [],
+      "fault_injected": true,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 4547,
+        "completion_tokens": 344
+      },
+      "est_cost_usd": 0.0008884499999999999,
+      "latency_ms": 5881.1,
+      "raw_outputs": [
+        "{\"answer\": \"Jane Doe-Test's most recent HbA1c was 8.2%, collected on 2025-03-12. The prior value was 7.6%, recorded in January 2025.\", \"answer_status\": \"answered\", \"citations\": [{\"chunk_id\": \"note_999#c99\", \"evidence\": \"fabricated evidence\"}, {\"chunk_id\": \"note_001#c03\", \"evidence\": \"Her prior HbA1c in January 2025 was 7.6%.\"}], \"missing_information\": [], \"self_reported_confidence\": 1, \"reasoning_summary\": \"The answer is derived from the laboratory results and history of present illness sections, which provide the most recent and prior HbA1c values.\"}",
+        "{\"answer\":\"Jane Doe-Test's most recent HbA1c was 8.2%, collected on 2025-03-12. The prior value was 7.6%, recorded in January 2025.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"note_001#c05\",\"evidence\":\"HbA1c 8.2% (collected 2025-03-12).\"},{\"chunk_id\":\"note_001#c03\",\"evidence\":\"Her prior HbA1c in January 2025 was 7.6%.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The answer is derived from the laboratory results and history of present illness sections, which provide the most recent and prior HbA1c values.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v2",
+      "label": "hcc_mapping",
+      "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.655,
+        "best_bm25": 16.96,
+        "chunk_ids": [
+          "guideline_002#c03",
+          "guideline_002#c05",
+          "guideline_002#c00",
+          "note_001#c01",
+          "guideline_002#c04"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "insufficient_context",
+      "answer": "",
+      "self_reported_confidence": 0.0,
+      "missing_information": [
+        "The specific diabetes codes documented for Jane Doe-Test are not provided in the context."
+      ],
+      "reasoning_summary": "The context does not include the diabetes codes for Jane Doe-Test, which are necessary to determine the HCC category.",
+      "citations": [],
+      "tool_calls": [],
+      "repair_attempts": 1,
+      "validation_errors": [],
+      "fault_injected": true,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 4608,
+        "completion_tokens": 156
+      },
+      "est_cost_usd": 0.0007848,
+      "latency_ms": 6955.8,
+      "raw_outputs": [
+        "{\"answer\": \"\", \"answer_status\": \"insufficient_context\", \"citations\": [{\"chunk_id\": \"note_999#c99\", \"evidence\": \"fabricated evidence\"}], \"missing_information\": [\"The specific diabetes codes documented for Jane Doe-Test are not provided in the context.\"], \"self_reported_confidence\": 0.0, \"reasoning_summary\": \"The context does not include the diabetes codes for Jane Doe-Test, which are necessary to determine the HCC category.\"}",
+        "{\"answer\":\"\",\"answer_status\":\"insufficient_context\",\"citations\":[],\"missing_information\":[\"The specific diabetes codes documented for Jane Doe-Test are not provided in the context.\"],\"self_reported_confidence\":0.0,\"reasoning_summary\":\"The context does not include the diabetes codes for Jane Doe-Test, which are necessary to determine the HCC category.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v2",
+      "label": "los_and_eligibility",
+      "query": "How many days was John Q. Testpatient hospitalized, and was he eligible for coverage on the discharge date?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.521,
+        "best_bm25": 14.63,
+        "chunk_ids": [
+          "note_002#c01",
+          "policy_002#c03",
+          "policy_002#c05",
+          "policy_002#c04",
+          "note_002#c08"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "answered",
+      "answer": "John Q. Testpatient was hospitalized for 5 days and was eligible for coverage on the discharge date.",
+      "self_reported_confidence": 1.0,
+      "missing_information": [],
+      "reasoning_summary": "The length of hospitalization was determined to be 5 days based on the admission and discharge dates. Coverage eligibility was confirmed as active on the discharge date.",
+      "citations": [
+        {
+          "chunk_id": "note_002#c01",
+          "evidence": "Admitted 2025-03-02. Discharged 2025-03-07.",
+          "doc_id": "note_002",
+          "doc_title": "Hospital Discharge Summary - Acute on Chronic Systolic Heart Failure",
+          "section": "Patient Information",
+          "date": "2025-03-07",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_002#c05",
+          "evidence": "For inpatient stays, the date of service for eligibility purposes is the discharge date.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "5. Inpatient Encounters",
+          "date": "2025-01-01",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_002#c03",
+          "evidence": "The response must show coverage status ACTIVE for that date.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "3. Member Eligibility Verification",
+          "date": "2025-01-01",
+          "verified": true
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "days_between",
+          "arguments": {
+            "start_date": "2025-03-02",
+            "end_date": "2025-03-07"
+          },
+          "result": {
+            "start_date": "2025-03-02",
+            "end_date": "2025-03-07",
+            "days": 5
+          },
+          "error": null,
+          "latency_ms": 0.73,
+          "timed_out": false
+        },
+        {
+          "name": "check_eligibility",
+          "arguments": {
+            "member_id": "M-TEST-1002",
+            "date_of_service": "2025-03-07"
+          },
+          "result": {
+            "member_id": "M-TEST-1002",
+            "date_of_service": "2025-03-07",
+            "checked_at": "2026-09-29T16:06:06+00:00",
+            "status": "ACTIVE",
+            "plan": "Example Health Plan Medicare Advantage PPO",
+            "coverage_start": "2023-01-01",
+            "coverage_end": "2025-12-31",
+            "termination_type": null,
+            "note": "Coverage active on the date of service."
+          },
+          "error": null,
+          "latency_ms": 0.08,
+          "timed_out": false
+        }
+      ],
+      "repair_attempts": 1,
+      "validation_errors": [],
+      "fault_injected": true,
+      "llm_calls": 3,
+      "usage": {
+        "prompt_tokens": 7029,
+        "completion_tokens": 345
+      },
+      "est_cost_usd": 0.0012613499999999998,
+      "latency_ms": 5199.0,
+      "raw_outputs": [
+        "{\"answer\": \"John Q. Testpatient was hospitalized for 5 days and was eligible for coverage on the discharge date.\", \"answer_status\": \"answered\", \"citations\": [{\"chunk_id\": \"note_999#c99\", \"evidence\": \"fabricated evidence\"}], \"missing_information\": [], \"self_reported_confidence\": 1, \"reasoning_summary\": \"The length of hospitalization was calculated as 5 days from March 2 to March 7, 2025. Coverage eligibility was confirmed as active on the discharge date.\"}",
+        "{\"answer\":\"John Q. Testpatient was hospitalized for 5 days and was eligible for coverage on the discharge date.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"note_002#c01\",\"evidence\":\"Admitted 2025-03-02. Discharged 2025-03-07.\"},{\"chunk_id\":\"policy_002#c05\",\"evidence\":\"For inpatient stays, the date of service for eligibility purposes is the discharge date.\"},{\"chunk_id\":\"policy_002#c03\",\"evidence\":\"The response must show coverage status ACTIVE for that date.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The length of hospitalization was determined to be 5 days based on the admission and discharge dates. Coverage eligibility was confirmed as active on the discharge date.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v2",
+      "label": "telehealth_submittable",
+      "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.572,
+        "best_bm25": 11.42,
+        "chunk_ids": [
+          "note_004#c01",
+          "policy_002#c02",
+          "policy_002#c04",
+          "policy_001#c06",
+          "policy_002#c01"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "insufficient_context",
+      "answer": "",
+      "self_reported_confidence": 0.5,
+      "missing_information": [
+        "The specific diagnoses documented during the telehealth visit for Robert Nonreal are not provided, which is necessary to determine if they can be recaptured at a qualifying encounter for risk adjustment submission."
+      ],
+      "reasoning_summary": "The context indicates that audio-only telehealth visits are not acceptable for risk adjustment submission, but it does not provide information on the diagnoses documented during the visit.",
+      "citations": [],
+      "tool_calls": [],
+      "repair_attempts": 1,
+      "validation_errors": [],
+      "fault_injected": true,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 4451,
+        "completion_tokens": 215
+      },
+      "est_cost_usd": 0.00079665,
+      "latency_ms": 3185.6,
+      "raw_outputs": [
+        "{\"answer\": \"\", \"answer_status\": \"insufficient_context\", \"citations\": [{\"chunk_id\": \"note_999#c99\", \"evidence\": \"fabricated evidence\"}], \"missing_information\": [\"The specific diagnoses documented during the telehealth visit for Robert Nonreal are not provided, which is necessary to determine if they can be recaptured at a qualifying encounter for risk adjustment submission.\"], \"self_reported_confidence\": 0.5, \"reasoning_summary\": \"The context indicates that audio-only telehealth visits are not acceptable for risk adjustment submission, but it does not provide information on the diagnoses documented during the visit.\"}",
+        "{\"answer\":\"\",\"answer_status\":\"insufficient_context\",\"citations\":[],\"missing_information\":[\"The specific diagnoses documented during the telehealth visit for Robert Nonreal are not provided, which is necessary to determine if they can be recaptured at a qualifying encounter for risk adjustment submission.\"],\"self_reported_confidence\":0.5,\"reasoning_summary\":\"The context indicates that audio-only telehealth visits are not acceptable for risk adjustment submission, but it does not provide information on the diagnoses documented during the visit.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v2",
+      "label": "canary_parametric",
+      "query": "What metformin dose is recommended for patients with CKD stage 3?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.478,
+        "best_bm25": 12.08,
+        "chunk_ids": [
+          "guideline_002#c04",
+          "note_001#c07",
+          "note_002#c05",
+          "note_001#c03",
+          "note_001#c06"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "insufficient_context",
+      "answer": "",
+      "self_reported_confidence": 0.0,
+      "missing_information": [
+        "The context does not provide any information regarding the recommended metformin dose for patients with CKD stage 3."
+      ],
+      "reasoning_summary": "There is no information in the provided context about the recommended metformin dose for patients with CKD stage 3.",
+      "citations": [],
+      "tool_calls": [],
+      "repair_attempts": 1,
+      "validation_errors": [],
+      "fault_injected": true,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 5122,
+        "completion_tokens": 160
+      },
+      "est_cost_usd": 0.0008642999999999999,
+      "latency_ms": 2853.8,
+      "raw_outputs": [
+        "{\"answer\": \"\", \"answer_status\": \"insufficient_context\", \"citations\": [{\"chunk_id\": \"note_999#c99\", \"evidence\": \"fabricated evidence\"}], \"missing_information\": [\"Recommended metformin dose for patients with CKD stage 3 is not provided in the context.\"], \"self_reported_confidence\": 0, \"reasoning_summary\": \"The context does not contain information regarding the recommended metformin dose specifically for patients with CKD stage 3.\"}",
+        "{\"answer\":\"\",\"answer_status\":\"insufficient_context\",\"citations\":[],\"missing_information\":[\"The context does not provide any information regarding the recommended metformin dose for patients with CKD stage 3.\"],\"self_reported_confidence\":0,\"reasoning_summary\":\"There is no information in the provided context about the recommended metformin dose for patients with CKD stage 3.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v2",
+      "label": "missing_fact",
+      "query": "What blood pressure medication is Maria Fictitious taking?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.379,
+        "best_bm25": 9.45,
+        "chunk_ids": [
+          "note_003#c01",
+          "note_003#c05",
+          "note_001#c04",
+          "note_001#c03",
+          "note_001#c07"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "insufficient_context",
+      "answer": "",
+      "self_reported_confidence": 0.0,
+      "missing_information": [
+        "The context does not provide any information about the blood pressure medication that Maria Fictitious is taking."
+      ],
+      "reasoning_summary": "There is no mention of any blood pressure medication for Maria Fictitious in the provided context.",
+      "citations": [],
+      "tool_calls": [],
+      "repair_attempts": 1,
+      "validation_errors": [],
+      "fault_injected": true,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 4398,
+        "completion_tokens": 150
+      },
+      "est_cost_usd": 0.0007497,
+      "latency_ms": 3058.8,
+      "raw_outputs": [
+        "{\"answer\": \"\", \"answer_status\": \"insufficient_context\", \"citations\": [{\"chunk_id\": \"note_999#c99\", \"evidence\": \"fabricated evidence\"}], \"missing_information\": [\"Information about Maria Fictitious's blood pressure medication is not provided in the context.\"], \"self_reported_confidence\": 0, \"reasoning_summary\": \"The context does not contain any information regarding the blood pressure medication that Maria Fictitious is taking.\"}",
+        "{\"answer\":\"\",\"answer_status\":\"insufficient_context\",\"citations\":[],\"missing_information\":[\"The context does not provide any information about the blood pressure medication that Maria Fictitious is taking.\"],\"self_reported_confidence\":0,\"reasoning_summary\":\"There is no mention of any blood pressure medication for Maria Fictitious in the provided context.\"}"
+      ]
+    }
+  ]
+}

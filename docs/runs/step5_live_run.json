@@ -1,0 +1,2118 @@
+{
+  "generated_at": "2026-09-29T16:47:08+00:00",
+  "model": "gpt-4o-mini",
+  "prompt_version": "v3",
+  "runs": [
+    {
+      "label": "gate_refusal",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "purple elephant quantum trombone",
+        "answer": "",
+        "answer_status": "insufficient_context",
+        "citations": [],
+        "tool_calls": [],
+        "confidence": 0.0,
+        "confidence_band": "low",
+        "missing_information": [
+          "No sufficiently relevant passage was found in the corpus for this question (gate: low_relevance(best_dense=0.158<0.37, best_bm25=0.00<5.0))."
+        ],
+        "needs_human_review": true,
+        "warnings": [],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "purple elephant quantum trombone",
+            "chunks": [
+              {
+                "chunk_id": "note_004#c02",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Chief Complaint",
+                "date": "2025-04-02",
+                "text": "Six weeks of bilateral hand and wrist pain with morning stiffness.",
+                "dense_score": 0.158,
+                "bm25_score": 0.0,
+                "fused_score": 0.01639,
+                "dense_rank": 1,
+                "bm25_rank": null,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_004#c06",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Attestation",
+                "date": "2025-04-02",
+                "text": "Electronically signed by D. Mockford, MD on 2025-04-02 14:30. (synthetic)",
+                "dense_score": 0.1422,
+                "bm25_score": 0.0,
+                "fused_score": 0.01613,
+                "dense_rank": 2,
+                "bm25_rank": null,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_004#c01",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Patient Information",
+                "date": "2025-04-02",
+                "text": "Name: Robert Nonreal. MRN: TEST-0004. DOB: 04/04/1965 (synthetic). Sex: Male. Member ID: M-TEST-1004.\nVisit modality: telehealth, audio-only (telephone). Video was attempted but the patient's connection failed, and the visit was completed by telephone. Patient location: home. Provider location: clinic. Verbal consent to telehealth obtained.",
+                "dense_score": 0.1418,
+                "bm25_score": 0.0,
+                "fused_score": 0.01587,
+                "dense_rank": 3,
+                "bm25_rank": null,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c05",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "5. Inpatient Encounters",
+                "date": "2025-01-01",
+                "text": "5.1 For inpatient stays, the date of service for eligibility purposes is the discharge date. Diagnoses documented in the discharge summary by the attending physician are acceptable when signed.",
+                "dense_score": 0.069,
+                "bm25_score": 0.0,
+                "fused_score": 0.01471,
+                "dense_rank": 8,
+                "bm25_rank": null,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_001#c05",
+                "doc_id": "policy_001",
+                "doc_type": "payer_policy",
+                "doc_title": "Risk Adjustment Documentation Requirements (Mock Payer Policy RA-100)",
+                "section": "5. Signature and Dating",
+                "date": "2025-01-01",
+                "text": "5.1 The note must contain the date of service and a legible provider signature with credentials. Electronic signatures must include a date and time stamp.\n5.2 Unsigned notes, and notes signed by a provider other than the rendering provider, are excluded.",
+                "dense_score": 0.0568,
+                "bm25_score": 0.0,
+                "fused_score": 0.01449,
+                "dense_rank": 9,
+                "bm25_rank": null,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.1579863429069519,
+            "best_bm25_score": 0.0,
+            "passes_gate": false,
+            "gate_reason": "low_relevance(best_dense=0.158<0.37, best_bm25=0.00<5.0)",
+            "context_tokens": 218,
+            "latency_ms": 15.6,
+            "anchored_docs": [],
+            "anchor_scores": {},
+            "scope_doc_ids": null
+          },
+          "gate_reason": "low_relevance(best_dense=0.158<0.37, best_bm25=0.00<5.0)",
+          "total_latency_ms": 15.7
+        }
+      }
+    },
+    {
+      "label": "canary_parametric",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "What metformin dose is recommended for patients with CKD stage 3?",
+        "answer": "",
+        "answer_status": "insufficient_context",
+        "citations": [],
+        "tool_calls": [],
+        "confidence": 0.0,
+        "confidence_band": "low",
+        "missing_information": [
+          "The context does not provide specific dosing recommendations for metformin in patients with CKD stage 3."
+        ],
+        "needs_human_review": true,
+        "warnings": [],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "What metformin dose is recommended for patients with CKD stage 3?",
+            "chunks": [
+              {
+                "chunk_id": "guideline_002#c04",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "4. Chronic Kidney Disease Hierarchy (illustrative)",
+                "date": "",
+                "text": "4.1 CKD stage 5 and end-stage renal disease rank highest, followed by stage 4, then stage 3b, then stage 3a and stage 3 unspecified. Stages 1 and 2 do not map to a payment HCC in the illustrative model.\n4.2 CKD stage 3a (N18.31) maps to the moderate CKD category.\n4.3 Diabetic CKD requires both the diabetes combination code (E11.22) and the CKD stage code (N18.3x) to be reported; the stage code supplies the severity.",
+                "dense_score": 0.4619,
+                "bm25_score": 12.084,
+                "fused_score": 0.03252,
+                "dense_rank": 2,
+                "bm25_rank": 1,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_001#c07",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Plan",
+                "date": "2025-03-14",
+                "text": "- Continue metformin 1000 mg twice daily. eGFR remains above 45, so no dose adjustment is required at this time.\n- Start empagliflozin 10 mg daily for glycemic control and renal protection. Counseled on genital mycotic infection risk and sick-day rules.\n- Repeat HbA1c, basic metabolic panel, and urine albumin-to-creatinine ratio in three months.\n- Annual dilated eye examination is overdue. Referral placed to ophthalmology.\n- Diabetic foot examination performed today: monofilament sensation reduced bilaterally, pedal pulses intact, no ulcers or calluses. Continue daily foot inspection.\n- Return to clinic in three months.",
+                "dense_score": 0.4776,
+                "bm25_score": 6.626,
+                "fused_score": 0.03252,
+                "dense_rank": 1,
+                "bm25_rank": 2,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_002#c05",
+                "doc_id": "note_002",
+                "doc_type": "clinical_note",
+                "doc_title": "Hospital Discharge Summary - Acute on Chronic Systolic Heart Failure",
+                "section": "Hospital Course (part 2/3)",
+                "date": "2025-03-07",
+                "text": "Creatinine rose to 1.9 mg/dL on hospital day two, attributed to aggressive diuresis; the furosemide dose was reduced and creatinine returned to his baseline of 1.1 mg/dL by 2025-03-06. His atrial fibrillation remained rate-controlled on metoprolol succinate, and apixaban was continued without interruption. COPD was managed with his home tiotropium; no systemic steroids or antibiotics were required. Guideline-directed medical therapy was optimized: sacubitril-valsartan 24/26 mg twice daily was started in place of lisinopril after a 36-hour washout, and spironolactone 12.5 mg daily was added after confirming a potassium of 4.2 mmol/L.",
+                "dense_score": 0.4292,
+                "bm25_score": 3.667,
+                "fused_score": 0.03055,
+                "dense_rank": 4,
+                "bm25_rank": 7,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_001#c03",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "History of Present Illness",
+                "date": "2025-03-14",
+                "text": "Ms. Doe-Test is a 65-year-old woman with long-standing type 2 diabetes mellitus, diagnosed in 2012, who presents for routine three-month follow-up. She reports good adherence to metformin 1000 mg twice daily. Home fasting glucose readings range from 130 to 160 mg/dL. She denies polyuria, polydipsia, hypoglycemic episodes, or visual changes. She reports mild bilateral foot numbness that has been stable over the past year. Her prior HbA1c in January 2025 was 7.6%.",
+                "dense_score": 0.3926,
+                "bm25_score": 4.552,
+                "fused_score": 0.03054,
+                "dense_rank": 6,
+                "bm25_rank": 5,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_001#c06",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Assessment",
+                "date": "2025-03-14",
+                "text": "1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.\n2. Chronic kidney disease, stage 3a (N18.31). eGFR stable at 52. Monitored with eGFR and urine albumin-to-creatinine ratio.\n3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.\n4. Obesity (E66.9), BMI 30.0 to 30.9 adult (Z68.30).",
+                "dense_score": 0.3568,
+                "bm25_score": 5.06,
+                "fused_score": 0.03012,
+                "dense_rank": 9,
+                "bm25_rank": 4,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.4775727391242981,
+            "best_bm25_score": 12.084086221978987,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 728,
+            "latency_ms": 7.4,
+            "anchored_docs": [],
+            "anchor_scores": {},
+            "scope_doc_ids": null
+          },
+          "llm_calls": 1,
+          "repair_attempts": 0,
+          "forced_final": false,
+          "fault_injected": false,
+          "usage": {
+            "prompt_tokens": 2617,
+            "completion_tokens": 94
+          },
+          "est_cost_usd": 0.00044895,
+          "agent_latency_ms": 3185.8,
+          "validation_errors": [],
+          "confidence_factors": {
+            "reason": "no answer to score (status insufficient_context)"
+          },
+          "reasoning_summary": "The context includes information about a patient with CKD stage 3 and metformin use, but it does not specify the recommended dose for patients with CKD stage 3.",
+          "total_latency_ms": 3193.3
+        }
+      }
+    },
+    {
+      "label": "hcc_mapping",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+        "answer": "The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitus with diabetic chronic kidney disease) and E11.42 (Type 2 diabetes mellitus with diabetic polyneuropathy), both map to the HCC category of \"Diabetes with Chronic Complications.\"",
+        "answer_status": "answered",
+        "citations": [
+          {
+            "chunk_id": "guideline_002#c03",
+            "evidence": "Diabetes with chronic complications (for example E11.22 type 2 diabetes with diabetic chronic kidney disease, and E11.42 type 2 diabetes with diabetic polyneuropathy) maps to the diabetes-with-complications category.",
+            "doc_id": "guideline_002",
+            "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+            "section": "3. Diabetes Hierarchy (illustrative)",
+            "date": "",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_001#c06",
+            "evidence": "Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "Assessment",
+            "date": "2025-03-14",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_001#c06",
+            "evidence": "Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "Assessment",
+            "date": "2025-03-14",
+            "verified": true
+          }
+        ],
+        "tool_calls": [
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "E11.22"
+            },
+            "result": {
+              "query": "E11.22",
+              "found": true,
+              "match_type": "code",
+              "code": "E11.22",
+              "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+              "hcc_category": "Diabetes with Chronic Complications",
+              "hcc_hierarchy": "Diabetes",
+              "severity_rank": 2,
+              "matches": [
+                {
+                  "code": "E11.22",
+                  "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+                  "hcc_category": "Diabetes with Chronic Complications",
+                  "hcc_hierarchy": "Diabetes",
+                  "severity_rank": 2
+                }
+              ],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 1.29,
+            "timed_out": false,
+            "cached": false
+          },
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "E11.42"
+            },
+            "result": {
+              "query": "E11.42",
+              "found": true,
+              "match_type": "code",
+              "code": "E11.42",
+              "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+              "hcc_category": "Diabetes with Chronic Complications",
+              "hcc_hierarchy": "Diabetes",
+              "severity_rank": 2,
+              "matches": [
+                {
+                  "code": "E11.42",
+                  "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+                  "hcc_category": "Diabetes with Chronic Complications",
+                  "hcc_hierarchy": "Diabetes",
+                  "severity_rank": 2
+                }
+              ],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 0.09,
+            "timed_out": false,
+            "cached": false
+          }
+        ],
+        "confidence": 1.0,
+        "confidence_band": "high",
+        "missing_information": [],
+        "needs_human_review": false,
+        "warnings": [],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+            "chunks": [
+              {
+                "chunk_id": "note_001#c00",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Preamble",
+                "date": "2025-03-14",
+                "text": "> SYNTHETIC DATA. This document was generated for a technical take-home exercise. It does not describe a real person, provider, or organization.",
+                "dense_score": 0.499,
+                "bm25_score": 2.144,
+                "fused_score": 0.02488,
+                "dense_rank": 12,
+                "bm25_rank": 31,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c01",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Patient Information",
+                "date": "2025-03-14",
+                "text": "Name: Jane Doe-Test. MRN: TEST-0001. DOB: 01/01/1960 (synthetic). Sex: Female. Member ID: M-TEST-1001. Visit type: office visit, face-to-face, established patient.",
+                "dense_score": 0.5894,
+                "bm25_score": 9.691,
+                "fused_score": 0.03078,
+                "dense_rank": 4,
+                "bm25_rank": 6,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c02",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Chief Complaint",
+                "date": "2025-03-14",
+                "text": "Three-month follow-up for type 2 diabetes mellitus and chronic kidney disease.",
+                "dense_score": 0.4043,
+                "bm25_score": 2.711,
+                "fused_score": 0.02442,
+                "dense_rank": 19,
+                "bm25_rank": 25,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c03",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "History of Present Illness",
+                "date": "2025-03-14",
+                "text": "Ms. Doe-Test is a 65-year-old woman with long-standing type 2 diabetes mellitus, diagnosed in 2012, who presents for routine three-month follow-up. She reports good adherence to metformin 1000 mg twice daily. Home fasting glucose readings range from 130 to 160 mg/dL. She denies polyuria, polydipsia, hypoglycemic episodes, or visual changes. She reports mild bilateral foot numbness that has been stable over the past year. Her prior HbA1c in January 2025 was 7.6%.",
+                "dense_score": 0.5407,
+                "bm25_score": 5.685,
+                "fused_score": 0.02838,
+                "dense_rank": 9,
+                "bm25_rank": 12,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c04",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Vitals",
+                "date": "2025-03-14",
+                "text": "Blood pressure 138/84 mmHg. Heart rate 76 bpm. Weight 84 kg. Height 165 cm. BMI 30.9 kg/m2.",
+                "dense_score": 0.3759,
+                "bm25_score": 1.14,
+                "fused_score": 0.02185,
+                "dense_rank": 20,
+                "bm25_rank": 47,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c05",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Laboratory Results",
+                "date": "2025-03-14",
+                "text": "HbA1c 8.2% (collected 2025-03-12). eGFR 52 mL/min/1.73m2 (2025-03-12), consistent with prior values of 50 to 55 over the past six months. Urine albumin-to-creatinine ratio 85 mg/g. LDL cholesterol was not collected at this visit.",
+                "dense_score": 0.4247,
+                "bm25_score": 2.459,
+                "fused_score": 0.02406,
+                "dense_rank": 18,
+                "bm25_rank": 29,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c06",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Assessment",
+                "date": "2025-03-14",
+                "text": "1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.\n2. Chronic kidney disease, stage 3a (N18.31). eGFR stable at 52. Monitored with eGFR and urine albumin-to-creatinine ratio.\n3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.\n4. Obesity (E66.9), BMI 30.0 to 30.9 adult (Z68.30).",
+                "dense_score": 0.3724,
+                "bm25_score": 3.341,
+                "fused_score": 0.02469,
+                "dense_rank": 21,
+                "bm25_rank": 21,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c07",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Plan",
+                "date": "2025-03-14",
+                "text": "- Continue metformin 1000 mg twice daily. eGFR remains above 45, so no dose adjustment is required at this time.\n- Start empagliflozin 10 mg daily for glycemic control and renal protection. Counseled on genital mycotic infection risk and sick-day rules.\n- Repeat HbA1c, basic metabolic panel, and urine albumin-to-creatinine ratio in three months.\n- Annual dilated eye examination is overdue. Referral placed to ophthalmology.\n- Diabetic foot examination performed today: monofilament sensation reduced bilaterally, pedal pulses intact, no ulcers or calluses. Continue daily foot inspection.\n- Return to clinic in three months.",
+                "dense_score": 0.3042,
+                "bm25_score": 1.955,
+                "fused_score": 0.02223,
+                "dense_rank": 28,
+                "bm25_rank": 32,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c08",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Attestation",
+                "date": "2025-03-14",
+                "text": "Electronically signed by A. Example, MD on 2025-03-14 16:42. (synthetic)",
+                "dense_score": 0.4715,
+                "bm25_score": 1.245,
+                "fused_score": 0.02322,
+                "dense_rank": 13,
+                "bm25_rank": 45,
+                "anchored": true
+              },
+              {
+                "chunk_id": "guideline_002#c03",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "3. Diabetes Hierarchy (illustrative)",
+                "date": "",
+                "text": "3.1 Diabetes with chronic complications (for example E11.22 type 2 diabetes with diabetic chronic kidney disease, and E11.42 type 2 diabetes with diabetic polyneuropathy) maps to the diabetes-with-complications category.\n3.2 Diabetes without complications (E11.9) maps to the diabetes-without-complications category, which is ranked below the complications category.\n3.3 If both a complicated and an uncomplicated diabetes code are documented in the same year, only the complications category is reported.\n3.4 In the illustrative model, diabetes with and without complications carry the same relative weight; the hierarchy still determines which category is reported.",
+                "dense_score": 0.612,
+                "bm25_score": 13.943,
+                "fused_score": 0.03226,
+                "dense_rank": 2,
+                "bm25_rank": 2,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_002#c05",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "5. Heart Failure (illustrative)",
+                "date": "",
+                "text": "5.1 All specified heart failure codes (I50.2x systolic, I50.3x diastolic, I50.4x combined) map to the heart failure category. Acute, chronic, and acute-on-chronic forms map to the same category in the illustrative model.\n5.2 Heart failure is additive with atrial fibrillation (I48.x) and with COPD (J44.x), which belong to different hierarchies.",
+                "dense_score": 0.5843,
+                "bm25_score": 16.962,
+                "fused_score": 0.03178,
+                "dense_rank": 5,
+                "bm25_rank": 1,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_002#c00",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "Preamble",
+                "date": "",
+                "text": "> SYNTHETIC DATA. The category labels and rankings in this guideline are simplified and illustrative. They must not be used for real risk adjustment submissions.",
+                "dense_score": 0.6546,
+                "bm25_score": 8.229,
+                "fused_score": 0.0311,
+                "dense_rank": 1,
+                "bm25_rank": 8,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_001#c03",
+                "doc_id": "guideline_001",
+                "doc_type": "coding_guideline",
+                "doc_title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+                "section": "3. Specificity",
+                "date": "",
+                "text": "3.1 Code to the highest level of specificity supported by the documentation. Unspecified codes are used only when the documentation does not support a more specific code.\n3.2 Combination codes that link two conditions (for example diabetes with chronic kidney disease) require that the documentation establish the causal relationship, either explicitly (\"diabetic CKD\", \"CKD due to diabetes\") or through the ICD-10-CM \"with\" convention where it applies.",
+                "dense_score": 0.5698,
+                "bm25_score": 7.359,
+                "fused_score": 0.02942,
+                "dense_rank": 7,
+                "bm25_rank": 9,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_001#c06",
+                "doc_id": "guideline_001",
+                "doc_type": "coding_guideline",
+                "doc_title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+                "section": "6. Body Mass Index",
+                "date": "",
+                "text": "6.1 BMI codes (category Z68) are reported only when an associated diagnosis such as obesity or overweight is documented by the provider.",
+                "dense_score": 0.5064,
+                "bm25_score": 8.488,
+                "fused_score": 0.02901,
+                "dense_rank": 11,
+                "bm25_rank": 7,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.6545522809028625,
+            "best_bm25_score": 16.961877814255978,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 1066,
+            "latency_ms": 18.1,
+            "anchored_docs": [
+              "note_001"
+            ],
+            "anchor_scores": {
+              "note_001": 2
+            },
+            "scope_doc_ids": null
+          },
+          "llm_calls": 2,
+          "repair_attempts": 0,
+          "forced_final": false,
+          "fault_injected": false,
+          "usage": {
+            "prompt_tokens": 6991,
+            "completion_tokens": 370
+          },
+          "est_cost_usd": 0.00127065,
+          "agent_latency_ms": 5267.4,
+          "validation_errors": [],
+          "confidence_factors": {
+            "retrieval_strength": 1.0,
+            "citations_verified": "3/3",
+            "tool_health": 1.0,
+            "repair_penalty": 1.0,
+            "self_reported": 1.0,
+            "weights": {
+              "retrieval": 0.35,
+              "citations": 0.35,
+              "tools": 0.1,
+              "repairs": 0.1,
+              "self_report": 0.1
+            }
+          },
+          "reasoning_summary": "The diabetes codes E11.22 and E11.42 were confirmed to map to the HCC category of \"Diabetes with Chronic Complications\" based on the provided guidelines and ICD-10 lookups.",
+          "total_latency_ms": 5285.9
+        }
+      }
+    },
+    {
+      "label": "telehealth_submittable",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+        "answer": "The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because it was conducted via audio-only (telephone), which is not acceptable for risk adjustment submission according to the payer policy. Additionally, the member's coverage was inactive on the date of service, as it was terminated retroactively effective March 31, 2025.",
+        "answer_status": "partial",
+        "citations": [
+          {
+            "chunk_id": "policy_002#c02",
+            "evidence": "Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted.",
+            "doc_id": "policy_002",
+            "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+            "section": "2. Telehealth Encounter Requirements",
+            "date": "2025-01-01",
+            "verified": true
+          },
+          {
+            "chunk_id": "policy_002#c02",
+            "evidence": "Diagnoses documented during audio-only visits must be recaptured at a qualifying encounter before submission.",
+            "doc_id": "policy_002",
+            "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+            "section": "2. Telehealth Encounter Requirements",
+            "date": "2025-01-01",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_004#c01",
+            "evidence": "Member ID: M-TEST-1004.",
+            "doc_id": "note_004",
+            "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+            "section": "Patient Information",
+            "date": "2025-04-02",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_004#c01",
+            "evidence": "Visit modality: telehealth, audio-only (telephone).",
+            "doc_id": "note_004",
+            "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+            "section": "Patient Information",
+            "date": "2025-04-02",
+            "verified": true
+          }
+        ],
+        "tool_calls": [
+          {
+            "name": "check_eligibility",
+            "arguments": {
+              "member_id": "M-TEST-1004",
+              "date_of_service": "2025-04-02"
+            },
+            "result": {
+              "member_id": "M-TEST-1004",
+              "date_of_service": "2025-04-02",
+              "checked_at": "2026-09-29T16:46:46+00:00",
+              "status": "INACTIVE",
+              "plan": "Example Health Plan Medicare Advantage HMO",
+              "coverage_start": "2024-06-01",
+              "coverage_end": "2025-03-31",
+              "termination_type": "retroactive",
+              "note": "Coverage not active on the date of service. Coverage was terminated retroactively effective 2025-03-31 (processed 2025-04-15)."
+            },
+            "error": null,
+            "latency_ms": 0.09,
+            "timed_out": false,
+            "cached": false
+          },
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "M25.50"
+            },
+            "result": {
+              "query": "M25.50",
+              "found": true,
+              "match_type": "code",
+              "code": "M25.50",
+              "description": "Pain in unspecified joint",
+              "hcc_category": null,
+              "hcc_hierarchy": null,
+              "severity_rank": null,
+              "matches": [
+                {
+                  "code": "M25.50",
+                  "description": "Pain in unspecified joint",
+                  "hcc_category": null,
+                  "hcc_hierarchy": null,
+                  "severity_rank": null
+                }
+              ],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 0.17,
+            "timed_out": false,
+            "cached": false
+          },
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "possible rheumatoid arthritis"
+            },
+            "result": {
+              "query": "possible rheumatoid arthritis",
+              "found": false,
+              "match_type": null,
+              "code": null,
+              "description": null,
+              "hcc_category": null,
+              "hcc_hierarchy": null,
+              "severity_rank": null,
+              "matches": [],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 0.18,
+            "timed_out": false,
+            "cached": false
+          },
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "rheumatoid arthritis"
+            },
+            "result": {
+              "query": "rheumatoid arthritis",
+              "found": true,
+              "match_type": "term",
+              "code": null,
+              "description": null,
+              "hcc_category": null,
+              "hcc_hierarchy": null,
+              "severity_rank": null,
+              "matches": [
+                {
+                  "code": "M06.9",
+                  "description": "Rheumatoid arthritis, unspecified",
+                  "hcc_category": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease",
+                  "hcc_hierarchy": "Inflammatory Arthritis",
+                  "severity_rank": 1
+                },
+                {
+                  "code": "M05.79",
+                  "description": "Rheumatoid arthritis with rheumatoid factor of multiple sites without organ or systems involvement",
+                  "hcc_category": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease",
+                  "hcc_hierarchy": "Inflammatory Arthritis",
+                  "severity_rank": 1
+                }
+              ],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 0.14,
+            "timed_out": false,
+            "cached": false
+          }
+        ],
+        "confidence": 0.79,
+        "confidence_band": "medium",
+        "missing_information": [],
+        "needs_human_review": true,
+        "warnings": [
+          "tool-round limit reached; the final answer was forced without further tool calls",
+          "1 unverifiable citation(s) removed after repair attempts were exhausted; answer downgraded to 'partial' and flagged for review"
+        ],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+            "chunks": [
+              {
+                "chunk_id": "note_004#c00",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Preamble",
+                "date": "2025-04-02",
+                "text": "> SYNTHETIC DATA. This document was generated for a technical take-home exercise. It does not describe a real person, provider, or organization.",
+                "dense_score": 0.3399,
+                "bm25_score": 4.66,
+                "fused_score": 0.02564,
+                "dense_rank": 18,
+                "bm25_rank": 18,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c01",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Patient Information",
+                "date": "2025-04-02",
+                "text": "Name: Robert Nonreal. MRN: TEST-0004. DOB: 04/04/1965 (synthetic). Sex: Male. Member ID: M-TEST-1004.\nVisit modality: telehealth, audio-only (telephone). Video was attempted but the patient's connection failed, and the visit was completed by telephone. Patient location: home. Provider location: clinic. Verbal consent to telehealth obtained.",
+                "dense_score": 0.5569,
+                "bm25_score": 11.423,
+                "fused_score": 0.03252,
+                "dense_rank": 2,
+                "bm25_rank": 1,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c02",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Chief Complaint",
+                "date": "2025-04-02",
+                "text": "Six weeks of bilateral hand and wrist pain with morning stiffness.",
+                "dense_score": 0.2915,
+                "bm25_score": 2.852,
+                "fused_score": 0.02298,
+                "dense_rank": 21,
+                "bm25_rank": 34,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c03",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "History of Present Illness",
+                "date": "2025-04-02",
+                "text": "Mr. Nonreal describes symmetric pain and swelling in the metacarpophalangeal joints of both hands and in both wrists for approximately six weeks, with morning stiffness lasting more than one hour. He reports fatigue and intermittent low-grade fevers. No rash, recent travel, or tick exposure. Over-the-counter ibuprofen provides partial relief. He has no prior history of inflammatory arthritis. Family history is notable for rheumatoid arthritis in his mother.",
+                "dense_score": 0.3797,
+                "bm25_score": 7.15,
+                "fused_score": 0.0284,
+                "dense_rank": 13,
+                "bm25_rank": 8,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c04",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Assessment",
+                "date": "2025-04-02",
+                "text": "1. Polyarthralgia with morning stiffness (M25.50). Possible rheumatoid arthritis. The diagnosis cannot be confirmed without laboratory evaluation and a physical examination, which was not possible by telephone.\n2. Long-term current use of a non-steroidal anti-inflammatory drug.",
+                "dense_score": 0.2121,
+                "bm25_score": 4.105,
+                "fused_score": 0.02358,
+                "dense_rank": 29,
+                "bm25_rank": 21,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c05",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Plan",
+                "date": "2025-04-02",
+                "text": "- Order rheumatoid factor, anti-CCP antibody, ESR, CRP, and complete blood count.\n- Schedule an in-person visit within two weeks for joint examination once laboratory results return.\n- Referral to rheumatology to be placed if serologies are positive.\n- Continue ibuprofen 400 mg as needed with food; do not exceed 1200 mg per day without further guidance.",
+                "dense_score": 0.2878,
+                "bm25_score": 4.679,
+                "fused_score": 0.02518,
+                "dense_rank": 22,
+                "bm25_rank": 17,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c06",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Attestation",
+                "date": "2025-04-02",
+                "text": "Electronically signed by D. Mockford, MD on 2025-04-02 14:30. (synthetic)",
+                "dense_score": 0.3678,
+                "bm25_score": 2.885,
+                "fused_score": 0.02374,
+                "dense_rank": 17,
+                "bm25_rank": 33,
+                "anchored": true
+              },
+              {
+                "chunk_id": "policy_002#c02",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "2. Telehealth Encounter Requirements",
+                "date": "2025-01-01",
+                "text": "2.1 A telehealth encounter is acceptable for risk adjustment only when it uses real-time interactive audio and video technology between the member and an acceptable provider.\n2.2 Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted. Diagnoses documented during audio-only visits must be recaptured at a qualifying encounter before submission.\n2.3 The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.\n2.4 Asynchronous communication (patient portal messages, e-mail, store-and-forward) is not acceptable.",
+                "dense_score": 0.5716,
+                "bm25_score": 8.307,
+                "fused_score": 0.03227,
+                "dense_rank": 1,
+                "bm25_rank": 3,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c04",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "4. Submission Timing",
+                "date": "2025-01-01",
+                "text": "4.1 Encounters must be submitted within 90 calendar days of the date of service, and no later than the final sweep deadline published annually.\n4.2 Late submissions are accepted only with a documented exception approved by the risk adjustment compliance lead.",
+                "dense_score": 0.499,
+                "bm25_score": 8.089,
+                "fused_score": 0.03126,
+                "dense_rank": 3,
+                "bm25_rank": 5,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_001#c06",
+                "doc_id": "policy_001",
+                "doc_type": "payer_policy",
+                "doc_title": "Risk Adjustment Documentation Requirements (Mock Payer Policy RA-100)",
+                "section": "6. Chronic Condition Recapture",
+                "date": "2025-01-01",
+                "text": "Chronic conditions (for example diabetes, chronic kidney disease, heart failure, and COPD) must be documented and supported with MEAT criteria at least once per calendar year to be submitted for that payment year. Documentation from a prior year does not carry forward.",
+                "dense_score": 0.412,
+                "bm25_score": 8.217,
+                "fused_score": 0.03055,
+                "dense_rank": 7,
+                "bm25_rank": 4,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c01",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "1. Scope",
+                "date": "2025-01-01",
+                "text": "This policy is a companion to Policy RA-100. It defines when a telehealth encounter is acceptable for risk adjustment and how member eligibility must be verified before submission.",
+                "dense_score": 0.4748,
+                "bm25_score": 7.502,
+                "fused_score": 0.03054,
+                "dense_rank": 5,
+                "bm25_rank": 6,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_001#c01",
+                "doc_id": "policy_001",
+                "doc_type": "payer_policy",
+                "doc_title": "Risk Adjustment Documentation Requirements (Mock Payer Policy RA-100)",
+                "section": "1. Purpose",
+                "date": "2025-01-01",
+                "text": "This policy defines the minimum documentation standards for a diagnosis to be submitted for risk adjustment under Example Health Plan's Medicare Advantage contracts.",
+                "dense_score": 0.3956,
+                "bm25_score": 11.231,
+                "fused_score": 0.03041,
+                "dense_rank": 10,
+                "bm25_rank": 2,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.5716443657875061,
+            "best_bm25_score": 11.42290897880911,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 686,
+            "latency_ms": 20.0,
+            "anchored_docs": [
+              "note_004"
+            ],
+            "anchor_scores": {
+              "note_004": 2
+            },
+            "scope_doc_ids": null
+          },
+          "llm_calls": 7,
+          "repair_attempts": 2,
+          "forced_final": true,
+          "fault_injected": false,
+          "usage": {
+            "prompt_tokens": 24428,
+            "completion_tokens": 979
+          },
+          "est_cost_usd": 0.0042515999999999995,
+          "agent_latency_ms": 14679.7,
+          "validation_errors": [
+            "citations[4] evidence is not a verbatim quote from policy_002#c04: 'Coverage not active on the date of service. Coverage was terminated retroactively effective 2025-03-31 (processed 2025-0'. Copy the supporting sentence exactly as it appears in that chunk.",
+            "citations[4] evidence 'Coverage not active on the date of service. Coverage was terminated retroactivel' is text from the 'check_eligibility' tool result. Tool results must not be cited: remove this citation and report the tool result in the answer instead."
+          ],
+          "confidence_factors": {
+            "retrieval_strength": 0.72,
+            "citations_verified": "4/4",
+            "tool_health": 1.0,
+            "repair_penalty": 0.6,
+            "self_reported": 0.9,
+            "weights": {
+              "retrieval": 0.35,
+              "citations": 0.35,
+              "tools": 0.1,
+              "repairs": 0.1,
+              "self_report": 0.1
+            }
+          },
+          "reasoning_summary": "The answer is based on the payer policy stating that audio-only visits are not acceptable for risk adjustment and the member's coverage status being inactive on the date of service.",
+          "total_latency_ms": 14700.4
+        }
+      }
+    },
+    {
+      "label": "phi_flag",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "Patient SSN 123-45-6789: what was Jane Doe-Test's most recent HbA1c?",
+        "answer": "Jane Doe-Test's most recent HbA1c was 8.2%, collected on 2025-03-12.",
+        "answer_status": "answered",
+        "citations": [
+          {
+            "chunk_id": "note_001#c05",
+            "evidence": "HbA1c 8.2% (collected 2025-03-12).",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "Laboratory Results",
+            "date": "2025-03-14",
+            "verified": true
+          }
+        ],
+        "tool_calls": [],
+        "confidence": 0.892,
+        "confidence_band": "high",
+        "missing_information": [],
+        "needs_human_review": false,
+        "warnings": [
+          "query contains a pattern that looks like a US Social Security number; identifiers must not be sent in free text (PHI policy: flag)"
+        ],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "Patient SSN 123-45-6789: what was Jane Doe-Test's most recent HbA1c?",
+            "chunks": [
+              {
+                "chunk_id": "note_001#c00",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Preamble",
+                "date": "2025-03-14",
+                "text": "> SYNTHETIC DATA. This document was generated for a technical take-home exercise. It does not describe a real person, provider, or organization.",
+                "dense_score": 0.2122,
+                "bm25_score": 1.318,
+                "fused_score": 0.02236,
+                "dense_rank": 37,
+                "bm25_rank": 23,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c01",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Patient Information",
+                "date": "2025-03-14",
+                "text": "Name: Jane Doe-Test. MRN: TEST-0001. DOB: 01/01/1960 (synthetic). Sex: Female. Member ID: M-TEST-1001. Visit type: office visit, face-to-face, established patient.",
+                "dense_score": 0.5003,
+                "bm25_score": 11.927,
+                "fused_score": 0.03279,
+                "dense_rank": 1,
+                "bm25_rank": 1,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c02",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Chief Complaint",
+                "date": "2025-03-14",
+                "text": "Three-month follow-up for type 2 diabetes mellitus and chronic kidney disease.",
+                "dense_score": 0.1463,
+                "bm25_score": 0.0,
+                "fused_score": 0.00826,
+                "dense_rank": 61,
+                "bm25_rank": null,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c03",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "History of Present Illness",
+                "date": "2025-03-14",
+                "text": "Ms. Doe-Test is a 65-year-old woman with long-standing type 2 diabetes mellitus, diagnosed in 2012, who presents for routine three-month follow-up. She reports good adherence to metformin 1000 mg twice daily. Home fasting glucose readings range from 130 to 160 mg/dL. She denies polyuria, polydipsia, hypoglycemic episodes, or visual changes. She reports mild bilateral foot numbness that has been stable over the past year. Her prior HbA1c in January 2025 was 7.6%.",
+                "dense_score": 0.4973,
+                "bm25_score": 5.499,
+                "fused_score": 0.03175,
+                "dense_rank": 2,
+                "bm25_rank": 4,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c04",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Vitals",
+                "date": "2025-03-14",
+                "text": "Blood pressure 138/84 mmHg. Heart rate 76 bpm. Weight 84 kg. Height 165 cm. BMI 30.9 kg/m2.",
+                "dense_score": 0.1494,
+                "bm25_score": 0.0,
+                "fused_score": 0.00833,
+                "dense_rank": 60,
+                "bm25_rank": null,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c05",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Laboratory Results",
+                "date": "2025-03-14",
+                "text": "HbA1c 8.2% (collected 2025-03-12). eGFR 52 mL/min/1.73m2 (2025-03-12), consistent with prior values of 50 to 55 over the past six months. Urine albumin-to-creatinine ratio 85 mg/g. LDL cholesterol was not collected at this visit.",
+                "dense_score": 0.3252,
+                "bm25_score": 3.894,
+                "fused_score": 0.03077,
+                "dense_rank": 5,
+                "bm25_rank": 5,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c06",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Assessment",
+                "date": "2025-03-14",
+                "text": "1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.\n2. Chronic kidney disease, stage 3a (N18.31). eGFR stable at 52. Monitored with eGFR and urine albumin-to-creatinine ratio.\n3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.\n4. Obesity (E66.9), BMI 30.0 to 30.9 adult (Z68.30).",
+                "dense_score": 0.1868,
+                "bm25_score": 2.012,
+                "fused_score": 0.02184,
+                "dense_rank": 53,
+                "bm25_rank": 17,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c07",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Plan",
+                "date": "2025-03-14",
+                "text": "- Continue metformin 1000 mg twice daily. eGFR remains above 45, so no dose adjustment is required at this time.\n- Start empagliflozin 10 mg daily for glycemic control and renal protection. Counseled on genital mycotic infection risk and sick-day rules.\n- Repeat HbA1c, basic metabolic panel, and urine albumin-to-creatinine ratio in three months.\n- Annual dilated eye examination is overdue. Referral placed to ophthalmology.\n- Diabetic foot examination performed today: monofilament sensation reduced bilaterally, pedal pulses intact, no ulcers or calluses. Continue daily foot inspection.\n- Return to clinic in three months.",
+                "dense_score": 0.1975,
+                "bm25_score": 1.937,
+                "fused_score": 0.02253,
+                "dense_rank": 43,
+                "bm25_rank": 18,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c08",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Attestation",
+                "date": "2025-03-14",
+                "text": "Electronically signed by A. Example, MD on 2025-03-14 16:42. (synthetic)",
+                "dense_score": 0.322,
+                "bm25_score": 0.0,
+                "fused_score": 0.01515,
+                "dense_rank": 6,
+                "bm25_rank": null,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_004#c01",
+                "doc_id": "note_004",
+                "doc_type": "clinical_note",
+                "doc_title": "Telehealth Visit Note - Joint Pain Evaluation",
+                "section": "Patient Information",
+                "date": "2025-04-02",
+                "text": "Name: Robert Nonreal. MRN: TEST-0004. DOB: 04/04/1965 (synthetic). Sex: Male. Member ID: M-TEST-1004.\nVisit modality: telehealth, audio-only (telephone). Video was attempted but the patient's connection failed, and the visit was completed by telephone. Patient location: home. Provider location: clinic. Verbal consent to telehealth obtained.",
+                "dense_score": 0.2854,
+                "bm25_score": 6.988,
+                "fused_score": 0.02983,
+                "dense_rank": 13,
+                "bm25_rank": 2,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_003#c01",
+                "doc_id": "note_003",
+                "doc_type": "clinical_note",
+                "doc_title": "Annual Wellness Visit - Preventive Care",
+                "section": "Patient Information",
+                "date": "2025-02-20",
+                "text": "Name: Maria Fictitious. MRN: TEST-0003. DOB: 03/03/1958 (synthetic). Sex: Female. Member ID: M-TEST-1003. Visit type: annual wellness visit, in person.",
+                "dense_score": 0.3695,
+                "bm25_score": 2.546,
+                "fused_score": 0.02976,
+                "dense_rank": 3,
+                "bm25_rank": 12,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_002#c01",
+                "doc_id": "note_002",
+                "doc_type": "clinical_note",
+                "doc_title": "Hospital Discharge Summary - Acute on Chronic Systolic Heart Failure",
+                "section": "Patient Information",
+                "date": "2025-03-07",
+                "text": "Name: John Q. Testpatient. MRN: TEST-0002. DOB: 02/02/1952 (synthetic). Sex: Male. Member ID: M-TEST-1002. Admitted 2025-03-02. Discharged 2025-03-07. Attending physician: B. Sample, DO. Disposition: home with self-care.",
+                "dense_score": 0.3178,
+                "bm25_score": 2.285,
+                "fused_score": 0.02844,
+                "dense_rank": 7,
+                "bm25_rank": 14,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_001#c04",
+                "doc_id": "guideline_001",
+                "doc_type": "coding_guideline",
+                "doc_title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+                "section": "4. Historical and Resolved Conditions",
+                "date": "",
+                "text": "4.1 Conditions documented as resolved, in remission with no active treatment, or \"history of\" are coded with personal history codes from categories Z85 through Z87.\n4.2 Example: breast cancer treated in a prior year with no evidence of disease and no current treatment is coded Z85.3 (personal history of malignant neoplasm of breast), not as an active C50 malignancy.\n4.3 A malignancy is coded as active only when the patient is receiving treatment directed at the malignancy or the documentation states that the disease is present.",
+                "dense_score": 0.3611,
+                "bm25_score": 1.476,
+                "fused_score": 0.02813,
+                "dense_rank": 4,
+                "bm25_rank": 20,
+                "anchored": false
+              },
+              {
+                "chunk_id": "note_003#c02",
+                "doc_id": "note_003",
+                "doc_type": "clinical_note",
+                "doc_title": "Annual Wellness Visit - Preventive Care",
+                "section": "Past Medical History",
+                "date": "2025-02-20",
+                "text": "- Breast cancer, left, stage I, treated with lumpectomy and radiation in 2015. No evidence of disease at the most recent oncology follow-up in November 2024. Not on active treatment. Documented as history of breast cancer.\n- Hypothyroidism, on levothyroxine 75 mcg daily, well controlled.\n- Osteopenia on DEXA scan in 2023.\n- Former smoker, quit in 2010, 15 pack-year history.",
+                "dense_score": 0.2515,
+                "bm25_score": 5.576,
+                "fused_score": 0.02807,
+                "dense_rank": 22,
+                "bm25_rank": 3,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.5003241300582886,
+            "best_bm25_score": 11.926557444970893,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 1125,
+            "latency_ms": 30.7,
+            "anchored_docs": [
+              "note_001"
+            ],
+            "anchor_scores": {
+              "note_001": 2
+            },
+            "scope_doc_ids": null
+          },
+          "llm_calls": 1,
+          "repair_attempts": 0,
+          "forced_final": false,
+          "fault_injected": false,
+          "usage": {
+            "prompt_tokens": 3337,
+            "completion_tokens": 125
+          },
+          "est_cost_usd": 0.00057555,
+          "agent_latency_ms": 1723.5,
+          "validation_errors": [],
+          "confidence_factors": {
+            "retrieval_strength": 0.693,
+            "citations_verified": "1/1",
+            "tool_health": 1.0,
+            "repair_penalty": 1.0,
+            "self_reported": 1.0,
+            "weights": {
+              "retrieval": 0.35,
+              "citations": 0.35,
+              "tools": 0.1,
+              "repairs": 0.1,
+              "self_report": 0.1
+            }
+          },
+          "reasoning_summary": "The answer is derived from the laboratory results section of the clinical note, which states the most recent HbA1c value and its collection date.",
+          "total_latency_ms": 1754.6
+        }
+      }
+    },
+    {
+      "label": "scoped_to_policy",
+      "doc_ids": [
+        "policy_002"
+      ],
+      "answer": {
+        "schema_version": "1.0",
+        "query": "What does section 2.2 say about audio-only encounters?",
+        "answer": "Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted. Diagnoses documented during audio-only visits must be recaptured at a qualifying encounter before submission.",
+        "answer_status": "answered",
+        "citations": [
+          {
+            "chunk_id": "policy_002#c02",
+            "evidence": "Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted. Diagnoses documented during audio-only visits must be recaptured at a qualifying encounter before submission.",
+            "doc_id": "policy_002",
+            "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+            "section": "2. Telehealth Encounter Requirements",
+            "date": "2025-01-01",
+            "verified": true
+          }
+        ],
+        "tool_calls": [],
+        "confidence": 0.784,
+        "confidence_band": "medium",
+        "missing_information": [],
+        "needs_human_review": true,
+        "warnings": [],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "What does section 2.2 say about audio-only encounters?",
+            "chunks": [
+              {
+                "chunk_id": "policy_002#c02",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "2. Telehealth Encounter Requirements",
+                "date": "2025-01-01",
+                "text": "2.1 A telehealth encounter is acceptable for risk adjustment only when it uses real-time interactive audio and video technology between the member and an acceptable provider.\n2.2 Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted. Diagnoses documented during audio-only visits must be recaptured at a qualifying encounter before submission.\n2.3 The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.\n2.4 Asynchronous communication (patient portal messages, e-mail, store-and-forward) is not acceptable.",
+                "dense_score": 0.4771,
+                "bm25_score": 8.026,
+                "fused_score": 0.03279,
+                "dense_rank": 1,
+                "bm25_rank": 1,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c05",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "5. Inpatient Encounters",
+                "date": "2025-01-01",
+                "text": "5.1 For inpatient stays, the date of service for eligibility purposes is the discharge date. Diagnoses documented in the discharge summary by the attending physician are acceptable when signed.",
+                "dense_score": 0.2256,
+                "bm25_score": 3.176,
+                "fused_score": 0.03175,
+                "dense_rank": 3,
+                "bm25_rank": 3,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c04",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "4. Submission Timing",
+                "date": "2025-01-01",
+                "text": "4.1 Encounters must be submitted within 90 calendar days of the date of service, and no later than the final sweep deadline published annually.\n4.2 Late submissions are accepted only with a documented exception approved by the risk adjustment compliance lead.",
+                "dense_score": 0.2253,
+                "bm25_score": 2.862,
+                "fused_score": 0.03125,
+                "dense_rank": 4,
+                "bm25_rank": 4,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.47707298398017883,
+            "best_bm25_score": 8.025583928141193,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 220,
+            "latency_ms": 14.3,
+            "anchored_docs": [],
+            "anchor_scores": {},
+            "scope_doc_ids": [
+              "policy_002"
+            ]
+          },
+          "llm_calls": 1,
+          "repair_attempts": 0,
+          "forced_final": false,
+          "fault_injected": false,
+          "usage": {
+            "prompt_tokens": 2052,
+            "completion_tokens": 154
+          },
+          "est_cost_usd": 0.00040019999999999997,
+          "agent_latency_ms": 2120.0,
+          "validation_errors": [],
+          "confidence_factors": {
+            "retrieval_strength": 0.382,
+            "citations_verified": "1/1",
+            "tool_health": 1.0,
+            "repair_penalty": 1.0,
+            "self_reported": 1.0,
+            "weights": {
+              "retrieval": 0.35,
+              "citations": 0.35,
+              "tools": 0.1,
+              "repairs": 0.1,
+              "self_report": 0.1
+            }
+          },
+          "reasoning_summary": "The answer is directly supported by section 2.2 of the provided policy, which explicitly states the rules regarding audio-only encounters.",
+          "total_latency_ms": 2134.5
+        }
+      }
+    },
+    {
+      "label": "cache_hit",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+        "answer": "The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitus with diabetic chronic kidney disease) and E11.42 (Type 2 diabetes mellitus with diabetic polyneuropathy), both map to the HCC category of \"Diabetes with Chronic Complications.\"",
+        "answer_status": "answered",
+        "citations": [
+          {
+            "chunk_id": "guideline_002#c03",
+            "evidence": "Diabetes with chronic complications (for example E11.22 type 2 diabetes with diabetic chronic kidney disease, and E11.42 type 2 diabetes with diabetic polyneuropathy) maps to the diabetes-with-complications category.",
+            "doc_id": "guideline_002",
+            "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+            "section": "3. Diabetes Hierarchy (illustrative)",
+            "date": "",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_001#c06",
+            "evidence": "Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "Assessment",
+            "date": "2025-03-14",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_001#c06",
+            "evidence": "Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "Assessment",
+            "date": "2025-03-14",
+            "verified": true
+          }
+        ],
+        "tool_calls": [
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "E11.22"
+            },
+            "result": {
+              "query": "E11.22",
+              "found": true,
+              "match_type": "code",
+              "code": "E11.22",
+              "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+              "hcc_category": "Diabetes with Chronic Complications",
+              "hcc_hierarchy": "Diabetes",
+              "severity_rank": 2,
+              "matches": [
+                {
+                  "code": "E11.22",
+                  "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+                  "hcc_category": "Diabetes with Chronic Complications",
+                  "hcc_hierarchy": "Diabetes",
+                  "severity_rank": 2
+                }
+              ],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 1.29,
+            "timed_out": false,
+            "cached": false
+          },
+          {
+            "name": "icd10_lookup",
+            "arguments": {
+              "query": "E11.42"
+            },
+            "result": {
+              "query": "E11.42",
+              "found": true,
+              "match_type": "code",
+              "code": "E11.42",
+              "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+              "hcc_category": "Diabetes with Chronic Complications",
+              "hcc_hierarchy": "Diabetes",
+              "severity_rank": 2,
+              "matches": [
+                {
+                  "code": "E11.42",
+                  "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+                  "hcc_category": "Diabetes with Chronic Complications",
+                  "hcc_hierarchy": "Diabetes",
+                  "severity_rank": 2
+                }
+              ],
+              "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+            },
+            "error": null,
+            "latency_ms": 0.09,
+            "timed_out": false,
+            "cached": false
+          }
+        ],
+        "confidence": 1.0,
+        "confidence_band": "high",
+        "missing_information": [],
+        "needs_human_review": false,
+        "warnings": [],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": true,
+          "retrieval": {
+            "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+            "chunks": [
+              {
+                "chunk_id": "note_001#c00",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Preamble",
+                "date": "2025-03-14",
+                "text": "> SYNTHETIC DATA. This document was generated for a technical take-home exercise. It does not describe a real person, provider, or organization.",
+                "dense_score": 0.499,
+                "bm25_score": 2.144,
+                "fused_score": 0.02488,
+                "dense_rank": 12,
+                "bm25_rank": 31,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c01",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Patient Information",
+                "date": "2025-03-14",
+                "text": "Name: Jane Doe-Test. MRN: TEST-0001. DOB: 01/01/1960 (synthetic). Sex: Female. Member ID: M-TEST-1001. Visit type: office visit, face-to-face, established patient.",
+                "dense_score": 0.5894,
+                "bm25_score": 9.691,
+                "fused_score": 0.03078,
+                "dense_rank": 4,
+                "bm25_rank": 6,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c02",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Chief Complaint",
+                "date": "2025-03-14",
+                "text": "Three-month follow-up for type 2 diabetes mellitus and chronic kidney disease.",
+                "dense_score": 0.4043,
+                "bm25_score": 2.711,
+                "fused_score": 0.02442,
+                "dense_rank": 19,
+                "bm25_rank": 25,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c03",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "History of Present Illness",
+                "date": "2025-03-14",
+                "text": "Ms. Doe-Test is a 65-year-old woman with long-standing type 2 diabetes mellitus, diagnosed in 2012, who presents for routine three-month follow-up. She reports good adherence to metformin 1000 mg twice daily. Home fasting glucose readings range from 130 to 160 mg/dL. She denies polyuria, polydipsia, hypoglycemic episodes, or visual changes. She reports mild bilateral foot numbness that has been stable over the past year. Her prior HbA1c in January 2025 was 7.6%.",
+                "dense_score": 0.5407,
+                "bm25_score": 5.685,
+                "fused_score": 0.02838,
+                "dense_rank": 9,
+                "bm25_rank": 12,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c04",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Vitals",
+                "date": "2025-03-14",
+                "text": "Blood pressure 138/84 mmHg. Heart rate 76 bpm. Weight 84 kg. Height 165 cm. BMI 30.9 kg/m2.",
+                "dense_score": 0.3759,
+                "bm25_score": 1.14,
+                "fused_score": 0.02185,
+                "dense_rank": 20,
+                "bm25_rank": 47,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c05",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Laboratory Results",
+                "date": "2025-03-14",
+                "text": "HbA1c 8.2% (collected 2025-03-12). eGFR 52 mL/min/1.73m2 (2025-03-12), consistent with prior values of 50 to 55 over the past six months. Urine albumin-to-creatinine ratio 85 mg/g. LDL cholesterol was not collected at this visit.",
+                "dense_score": 0.4247,
+                "bm25_score": 2.459,
+                "fused_score": 0.02406,
+                "dense_rank": 18,
+                "bm25_rank": 29,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c06",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Assessment",
+                "date": "2025-03-14",
+                "text": "1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.\n2. Chronic kidney disease, stage 3a (N18.31). eGFR stable at 52. Monitored with eGFR and urine albumin-to-creatinine ratio.\n3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.\n4. Obesity (E66.9), BMI 30.0 to 30.9 adult (Z68.30).",
+                "dense_score": 0.3724,
+                "bm25_score": 3.341,
+                "fused_score": 0.02469,
+                "dense_rank": 21,
+                "bm25_rank": 21,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c07",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Plan",
+                "date": "2025-03-14",
+                "text": "- Continue metformin 1000 mg twice daily. eGFR remains above 45, so no dose adjustment is required at this time.\n- Start empagliflozin 10 mg daily for glycemic control and renal protection. Counseled on genital mycotic infection risk and sick-day rules.\n- Repeat HbA1c, basic metabolic panel, and urine albumin-to-creatinine ratio in three months.\n- Annual dilated eye examination is overdue. Referral placed to ophthalmology.\n- Diabetic foot examination performed today: monofilament sensation reduced bilaterally, pedal pulses intact, no ulcers or calluses. Continue daily foot inspection.\n- Return to clinic in three months.",
+                "dense_score": 0.3042,
+                "bm25_score": 1.955,
+                "fused_score": 0.02223,
+                "dense_rank": 28,
+                "bm25_rank": 32,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c08",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Attestation",
+                "date": "2025-03-14",
+                "text": "Electronically signed by A. Example, MD on 2025-03-14 16:42. (synthetic)",
+                "dense_score": 0.4715,
+                "bm25_score": 1.245,
+                "fused_score": 0.02322,
+                "dense_rank": 13,
+                "bm25_rank": 45,
+                "anchored": true
+              },
+              {
+                "chunk_id": "guideline_002#c03",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "3. Diabetes Hierarchy (illustrative)",
+                "date": "",
+                "text": "3.1 Diabetes with chronic complications (for example E11.22 type 2 diabetes with diabetic chronic kidney disease, and E11.42 type 2 diabetes with diabetic polyneuropathy) maps to the diabetes-with-complications category.\n3.2 Diabetes without complications (E11.9) maps to the diabetes-without-complications category, which is ranked below the complications category.\n3.3 If both a complicated and an uncomplicated diabetes code are documented in the same year, only the complications category is reported.\n3.4 In the illustrative model, diabetes with and without complications carry the same relative weight; the hierarchy still determines which category is reported.",
+                "dense_score": 0.612,
+                "bm25_score": 13.943,
+                "fused_score": 0.03226,
+                "dense_rank": 2,
+                "bm25_rank": 2,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_002#c05",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "5. Heart Failure (illustrative)",
+                "date": "",
+                "text": "5.1 All specified heart failure codes (I50.2x systolic, I50.3x diastolic, I50.4x combined) map to the heart failure category. Acute, chronic, and acute-on-chronic forms map to the same category in the illustrative model.\n5.2 Heart failure is additive with atrial fibrillation (I48.x) and with COPD (J44.x), which belong to different hierarchies.",
+                "dense_score": 0.5843,
+                "bm25_score": 16.962,
+                "fused_score": 0.03178,
+                "dense_rank": 5,
+                "bm25_rank": 1,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_002#c00",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "Preamble",
+                "date": "",
+                "text": "> SYNTHETIC DATA. The category labels and rankings in this guideline are simplified and illustrative. They must not be used for real risk adjustment submissions.",
+                "dense_score": 0.6546,
+                "bm25_score": 8.229,
+                "fused_score": 0.0311,
+                "dense_rank": 1,
+                "bm25_rank": 8,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_001#c03",
+                "doc_id": "guideline_001",
+                "doc_type": "coding_guideline",
+                "doc_title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+                "section": "3. Specificity",
+                "date": "",
+                "text": "3.1 Code to the highest level of specificity supported by the documentation. Unspecified codes are used only when the documentation does not support a more specific code.\n3.2 Combination codes that link two conditions (for example diabetes with chronic kidney disease) require that the documentation establish the causal relationship, either explicitly (\"diabetic CKD\", \"CKD due to diabetes\") or through the ICD-10-CM \"with\" convention where it applies.",
+                "dense_score": 0.5698,
+                "bm25_score": 7.359,
+                "fused_score": 0.02942,
+                "dense_rank": 7,
+                "bm25_rank": 9,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_001#c06",
+                "doc_id": "guideline_001",
+                "doc_type": "coding_guideline",
+                "doc_title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+                "section": "6. Body Mass Index",
+                "date": "",
+                "text": "6.1 BMI codes (category Z68) are reported only when an associated diagnosis such as obesity or overweight is documented by the provider.",
+                "dense_score": 0.5064,
+                "bm25_score": 8.488,
+                "fused_score": 0.02901,
+                "dense_rank": 11,
+                "bm25_rank": 7,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.6545522809028625,
+            "best_bm25_score": 16.961877814255978,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 1066,
+            "latency_ms": 18.1,
+            "anchored_docs": [
+              "note_001"
+            ],
+            "anchor_scores": {
+              "note_001": 2
+            },
+            "scope_doc_ids": null
+          },
+          "llm_calls": 2,
+          "repair_attempts": 0,
+          "forced_final": false,
+          "fault_injected": false,
+          "usage": {
+            "prompt_tokens": 6991,
+            "completion_tokens": 370
+          },
+          "est_cost_usd": 0.00127065,
+          "agent_latency_ms": 5267.4,
+          "validation_errors": [],
+          "confidence_factors": {
+            "retrieval_strength": 1.0,
+            "citations_verified": "3/3",
+            "tool_health": 1.0,
+            "repair_penalty": 1.0,
+            "self_reported": 1.0,
+            "weights": {
+              "retrieval": 0.35,
+              "citations": 0.35,
+              "tools": 0.1,
+              "repairs": 0.1,
+              "self_report": 0.1
+            }
+          },
+          "reasoning_summary": "The diabetes codes E11.22 and E11.42 were confirmed to map to the HCC category of \"Diabetes with Chronic Complications\" based on the provided guidelines and ICD-10 lookups.",
+          "total_latency_ms": 5285.9
+        }
+      }
+    },
+    {
+      "label": "fault_injection",
+      "doc_ids": null,
+      "answer": {
+        "schema_version": "1.0",
+        "query": "What was Jane Doe-Test's most recent HbA1c, and what was the prior value?",
+        "answer": "Jane Doe-Test's most recent HbA1c is 8.2%, and the prior value was 7.6%.",
+        "answer_status": "answered",
+        "citations": [
+          {
+            "chunk_id": "note_001#c05",
+            "evidence": "HbA1c 8.2% (collected 2025-03-12).",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "Laboratory Results",
+            "date": "2025-03-14",
+            "verified": true
+          },
+          {
+            "chunk_id": "note_001#c03",
+            "evidence": "Her prior HbA1c in January 2025 was 7.6%.",
+            "doc_id": "note_001",
+            "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+            "section": "History of Present Illness",
+            "date": "2025-03-14",
+            "verified": true
+          }
+        ],
+        "tool_calls": [],
+        "confidence": 0.761,
+        "confidence_band": "medium",
+        "missing_information": [],
+        "needs_human_review": true,
+        "warnings": [
+          "fault injection was enabled; the first model response was deliberately corrupted for demonstration"
+        ],
+        "errors": [],
+        "trace": {
+          "prompt_version": "v3",
+          "model": "gpt-4o-mini",
+          "index_fingerprint": "9268ef4373e8d240",
+          "cache_hit": false,
+          "retrieval": {
+            "query": "What was Jane Doe-Test's most recent HbA1c, and what was the prior value?",
+            "chunks": [
+              {
+                "chunk_id": "note_001#c00",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Preamble",
+                "date": "2025-03-14",
+                "text": "> SYNTHETIC DATA. This document was generated for a technical take-home exercise. It does not describe a real person, provider, or organization.",
+                "dense_score": 0.1855,
+                "bm25_score": 2.636,
+                "fused_score": 0.02223,
+                "dense_rank": 32,
+                "bm25_rank": 28,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c01",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Patient Information",
+                "date": "2025-03-14",
+                "text": "Name: Jane Doe-Test. MRN: TEST-0001. DOB: 01/01/1960 (synthetic). Sex: Female. Member ID: M-TEST-1001. Visit type: office visit, face-to-face, established patient.",
+                "dense_score": 0.4321,
+                "bm25_score": 8.598,
+                "fused_score": 0.03226,
+                "dense_rank": 2,
+                "bm25_rank": 2,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c02",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Chief Complaint",
+                "date": "2025-03-14",
+                "text": "Three-month follow-up for type 2 diabetes mellitus and chronic kidney disease.",
+                "dense_score": 0.0901,
+                "bm25_score": 1.134,
+                "fused_score": 0.01795,
+                "dense_rank": 60,
+                "bm25_rank": 44,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c03",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "History of Present Illness",
+                "date": "2025-03-14",
+                "text": "Ms. Doe-Test is a 65-year-old woman with long-standing type 2 diabetes mellitus, diagnosed in 2012, who presents for routine three-month follow-up. She reports good adherence to metformin 1000 mg twice daily. Home fasting glucose readings range from 130 to 160 mg/dL. She denies polyuria, polydipsia, hypoglycemic episodes, or visual changes. She reports mild bilateral foot numbness that has been stable over the past year. Her prior HbA1c in January 2025 was 7.6%.",
+                "dense_score": 0.4351,
+                "bm25_score": 8.745,
+                "fused_score": 0.03279,
+                "dense_rank": 1,
+                "bm25_rank": 1,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c04",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Vitals",
+                "date": "2025-03-14",
+                "text": "Blood pressure 138/84 mmHg. Heart rate 76 bpm. Weight 84 kg. Height 165 cm. BMI 30.9 kg/m2.",
+                "dense_score": 0.1354,
+                "bm25_score": 0.0,
+                "fused_score": 0.00885,
+                "dense_rank": 53,
+                "bm25_rank": null,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c05",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Laboratory Results",
+                "date": "2025-03-14",
+                "text": "HbA1c 8.2% (collected 2025-03-12). eGFR 52 mL/min/1.73m2 (2025-03-12), consistent with prior values of 50 to 55 over the past six months. Urine albumin-to-creatinine ratio 85 mg/g. LDL cholesterol was not collected at this visit.",
+                "dense_score": 0.3396,
+                "bm25_score": 8.227,
+                "fused_score": 0.03175,
+                "dense_rank": 3,
+                "bm25_rank": 3,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c06",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Assessment",
+                "date": "2025-03-14",
+                "text": "1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.\n2. Chronic kidney disease, stage 3a (N18.31). eGFR stable at 52. Monitored with eGFR and urine albumin-to-creatinine ratio.\n3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.\n4. Obesity (E66.9), BMI 30.0 to 30.9 adult (Z68.30).",
+                "dense_score": 0.1569,
+                "bm25_score": 3.942,
+                "fused_score": 0.02244,
+                "dense_rank": 44,
+                "bm25_rank": 18,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c07",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Plan",
+                "date": "2025-03-14",
+                "text": "- Continue metformin 1000 mg twice daily. eGFR remains above 45, so no dose adjustment is required at this time.\n- Start empagliflozin 10 mg daily for glycemic control and renal protection. Counseled on genital mycotic infection risk and sick-day rules.\n- Repeat HbA1c, basic metabolic panel, and urine albumin-to-creatinine ratio in three months.\n- Annual dilated eye examination is overdue. Referral placed to ophthalmology.\n- Diabetic foot examination performed today: monofilament sensation reduced bilaterally, pedal pulses intact, no ulcers or calluses. Continue daily foot inspection.\n- Return to clinic in three months.",
+                "dense_score": 0.1409,
+                "bm25_score": 3.079,
+                "fused_score": 0.02129,
+                "dense_rank": 50,
+                "bm25_rank": 22,
+                "anchored": true
+              },
+              {
+                "chunk_id": "note_001#c08",
+                "doc_id": "note_001",
+                "doc_type": "clinical_note",
+                "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+                "section": "Attestation",
+                "date": "2025-03-14",
+                "text": "Electronically signed by A. Example, MD on 2025-03-14 16:42. (synthetic)",
+                "dense_score": 0.2822,
+                "bm25_score": 0.0,
+                "fused_score": 0.01493,
+                "dense_rank": 7,
+                "bm25_rank": null,
+                "anchored": true
+              },
+              {
+                "chunk_id": "guideline_001#c04",
+                "doc_id": "guideline_001",
+                "doc_type": "coding_guideline",
+                "doc_title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+                "section": "4. Historical and Resolved Conditions",
+                "date": "",
+                "text": "4.1 Conditions documented as resolved, in remission with no active treatment, or \"history of\" are coded with personal history codes from categories Z85 through Z87.\n4.2 Example: breast cancer treated in a prior year with no evidence of disease and no current treatment is coded Z85.3 (personal history of malignant neoplasm of breast), not as an active C50 malignancy.\n4.3 A malignancy is coded as active only when the patient is receiving treatment directed at the malignancy or the documentation states that the disease is present.",
+                "dense_score": 0.2892,
+                "bm25_score": 3.779,
+                "fused_score": 0.02781,
+                "dense_rank": 6,
+                "bm25_rank": 19,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_001#c00",
+                "doc_id": "policy_001",
+                "doc_type": "payer_policy",
+                "doc_title": "Risk Adjustment Documentation Requirements (Mock Payer Policy RA-100)",
+                "section": "Preamble",
+                "date": "2025-01-01",
+                "text": "> SYNTHETIC DATA. This policy was written for a technical take-home exercise. It does not represent any real payer's policy and must not be used for real submissions.",
+                "dense_score": 0.2253,
+                "bm25_score": 5.923,
+                "fused_score": 0.02736,
+                "dense_rank": 19,
+                "bm25_rank": 8,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c03",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "3. Member Eligibility Verification",
+                "date": "2025-01-01",
+                "text": "3.1 Before any diagnosis is submitted, the member must be verified as actively enrolled in an Example Health Plan Medicare Advantage product on the date of service.\n3.2 Eligibility is verified through the plan eligibility service using the member ID and the date of service. The response must show coverage status ACTIVE for that date.\n3.3 If the member's coverage was terminated retroactively, any diagnoses documented after the termination date are withdrawn from submission.\n3.4 Eligibility lookups must be logged with the member ID, date of service, response status, and timestamp for audit purposes.",
+                "dense_score": 0.2298,
+                "bm25_score": 5.596,
+                "fused_score": 0.02688,
+                "dense_rank": 17,
+                "bm25_rank": 12,
+                "anchored": false
+              },
+              {
+                "chunk_id": "guideline_002#c02",
+                "doc_id": "guideline_002",
+                "doc_type": "coding_guideline",
+                "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+                "section": "2. Hierarchies",
+                "date": "",
+                "text": "2.1 An HCC hierarchy groups related conditions by severity. When a member has diagnoses that map to more than one HCC within the same hierarchy, only the most severe (highest-ranked) HCC contributes to the risk score. Lower-ranked HCCs in the same hierarchy are dropped.\n2.2 HCCs in different hierarchies are additive. For example, a diabetes HCC and a heart failure HCC both count toward the risk score.",
+                "dense_score": 0.2302,
+                "bm25_score": 4.734,
+                "fused_score": 0.02667,
+                "dense_rank": 16,
+                "bm25_rank": 14,
+                "anchored": false
+              },
+              {
+                "chunk_id": "policy_002#c00",
+                "doc_id": "policy_002",
+                "doc_type": "payer_policy",
+                "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+                "section": "Preamble",
+                "date": "2025-01-01",
+                "text": "> SYNTHETIC DATA. This policy was written for a technical take-home exercise. It does not represent any real payer's policy and must not be used for real submissions.",
+                "dense_score": 0.2062,
+                "bm25_score": 6.155,
+                "fused_score": 0.02655,
+                "dense_rank": 26,
+                "bm25_rank": 7,
+                "anchored": false
+              }
+            ],
+            "dropped_chunk_ids": [],
+            "best_dense_score": 0.4350605607032776,
+            "best_bm25_score": 8.745337494287462,
+            "passes_gate": true,
+            "gate_reason": "ok",
+            "context_tokens": 1078,
+            "latency_ms": 15.9,
+            "anchored_docs": [
+              "note_001"
+            ],
+            "anchor_scores": {
+              "note_001": 2
+            },
+            "scope_doc_ids": null
+          },
+          "llm_calls": 2,
+          "repair_attempts": 1,
+          "forced_final": false,
+          "fault_injected": true,
+          "usage": {
+            "prompt_tokens": 7076,
+            "completion_tokens": 310
+          },
+          "est_cost_usd": 0.0012473999999999999,
+          "agent_latency_ms": 4065.8,
+          "validation_errors": [],
+          "confidence_factors": {
+            "retrieval_strength": 0.375,
+            "citations_verified": "2/2",
+            "tool_health": 1.0,
+            "repair_penalty": 0.8,
+            "self_reported": 1.0,
+            "weights": {
+              "retrieval": 0.35,
+              "citations": 0.35,
+              "tools": 0.1,
+              "repairs": 0.1,
+              "self_report": 0.1
+            }
+          },
+          "reasoning_summary": "The most recent and prior HbA1c values were extracted from the clinical note sections detailing laboratory results and history of present illness.",
+          "total_latency_ms": 4082.2
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "generated_at": "2026-09-29T16:21:29+00:00",
+  "model": "gpt-4o-mini",
+  "fault": "",
+  "runs": [
+    {
+      "prompt_version": "v3",
+      "label": "telehealth_submittable",
+      "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.572,
+        "best_bm25": 11.42,
+        "chunk_ids": [
+          "note_004#c00",
+          "note_004#c01",
+          "note_004#c02",
+          "note_004#c03",
+          "note_004#c04",
+          "note_004#c05",
+          "note_004#c06",
+          "policy_002#c02",
+          "policy_002#c04",
+          "policy_001#c06",
+          "policy_002#c01",
+          "policy_001#c01"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "answered",
+      "answer": "The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because the member's coverage was inactive on the date of service, having been terminated retroactively effective March 31, 2025. Additionally, the telehealth encounter was conducted via audio-only, which is not acceptable for risk adjustment submission according to the payer policy.",
+      "self_reported_confidence": 0.9,
+      "missing_information": [],
+      "reasoning_summary": "The visit cannot be submitted due to the member's inactive coverage on the date of service and the use of audio-only telehealth, which is not acceptable for risk adjustment.",
+      "citations": [
+        {
+          "chunk_id": "policy_002#c02",
+          "evidence": "Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "2. Telehealth Encounter Requirements",
+          "date": "2025-01-01",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_002#c02",
+          "evidence": "The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "2. Telehealth Encounter Requirements",
+          "date": "2025-01-01",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_002#c04",
+          "evidence": "Encounters must be submitted within 90 calendar days of the date of service, and no later than the final sweep deadline published annually.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "4. Submission Timing",
+          "date": "2025-01-01",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_001#c06",
+          "evidence": "Chronic conditions (for example diabetes, chronic kidney disease, heart failure, and COPD) must be documented and supported with MEAT criteria at least once per calendar year to be submitted for that payment year.",
+          "doc_id": "policy_001",
+          "doc_title": "Risk Adjustment Documentation Requirements (Mock Payer Policy RA-100)",
+          "section": "6. Chronic Condition Recapture",
+          "date": "2025-01-01",
+          "verified": true
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "check_eligibility",
+          "arguments": {
+            "member_id": "M-TEST-1004",
+            "date_of_service": "2025-04-02"
+          },
+          "result": {
+            "member_id": "M-TEST-1004",
+            "date_of_service": "2025-04-02",
+            "checked_at": "2026-09-29T16:21:22+00:00",
+            "status": "INACTIVE",
+            "plan": "Example Health Plan Medicare Advantage HMO",
+            "coverage_start": "2024-06-01",
+            "coverage_end": "2025-03-31",
+            "termination_type": "retroactive",
+            "note": "Coverage not active on the date of service. Coverage was terminated retroactively effective 2025-03-31 (processed 2025-04-15)."
+          },
+          "error": null,
+          "latency_ms": 0.72,
+          "timed_out": false
+        },
+        {
+          "name": "days_between",
+          "arguments": {
+            "start_date": "2025-04-02",
+            "end_date": "2025-03-31"
+          },
+          "result": {
+            "start_date": "2025-04-02",
+            "end_date": "2025-03-31",
+            "days": -2
+          },
+          "error": null,
+          "latency_ms": 0.26,
+          "timed_out": false
+        },
+        {
+          "name": "days_between",
+          "arguments": {
+            "start_date": "2025-04-02",
+            "end_date": "2025-01-01"
+          },
+          "result": {
+            "start_date": "2025-04-02",
+            "end_date": "2025-01-01",
+            "days": -91
+          },
+          "error": null,
+          "latency_ms": 0.29,
+          "timed_out": false
+        },
+        {
+          "name": "days_between",
+          "arguments": {
+            "start_date": "2025-04-02",
+            "end_date": "2025-04-02"
+          },
+          "result": {
+            "start_date": "2025-04-02",
+            "end_date": "2025-04-02",
+            "days": 0
+          },
+          "error": null,
+          "latency_ms": 0.15,
+          "timed_out": false
+        }
+      ],
+      "repair_attempts": 0,
+      "validation_errors": [],
+      "fault_injected": false,
+      "llm_calls": 5,
+      "usage": {
+        "prompt_tokens": 15311,
+        "completion_tokens": 434
+      },
+      "est_cost_usd": 0.0025570500000000004,
+      "latency_ms": 8739.8,
+      "raw_outputs": [
+        "{\"answer\":\"The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because the member's coverage was inactive on the date of service, having been terminated retroactively effective March 31, 2025. Additionally, the telehealth encounter was conducted via audio-only, which is not acceptable for risk adjustment submission according to the payer policy.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.\"},{\"chunk_id\":\"policy_002#c04\",\"evidence\":\"Encounters must be submitted within 90 calendar days of the date of service, and no later than the final sweep deadline published annually.\"},{\"chunk_id\":\"policy_001#c06\",\"evidence\":\"Chronic conditions (for example diabetes, chronic kidney disease, heart failure, and COPD) must be documented and supported with MEAT criteria at least once per calendar year to be submitted for that payment year.\"}],\"missing_information\":[],\"self_reported_confidence\":0.9,\"reasoning_summary\":\"The visit cannot be submitted due to the member's inactive coverage on the date of service and the use of audio-only telehealth, which is not acceptable for risk adjustment.\"}"
+      ]
+    }
+  ]
+}

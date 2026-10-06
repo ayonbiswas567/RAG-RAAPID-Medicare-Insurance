@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-09-29T17:26:15+00:00",
+  "api_ready_seconds": 13.8,
+  "ui_ready_seconds": 0.2,
+  "health": {
+    "status": "ok",
+    "chunks": 62,
+    "index_fingerprint": "9268ef4373e8d240",
+    "llm_available": true,
+    "model": "gpt-4o-mini",
+    "prompt_version": "v4",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "cache_entries": 0
+  },
+  "documents": [
+    {
+      "doc_id": "guideline_001",
+      "title": "Outpatient Diagnosis Coding Conventions (Mock Internal Guideline CG-01)",
+      "doc_type": "coding_guideline",
+      "date": "",
+      "n_chunks": 7
+    },
+    {
+      "doc_id": "guideline_002",
+      "title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+      "doc_type": "coding_guideline",
+      "date": "",
+      "n_chunks": 7
+    },
+    {
+      "doc_id": "note_001",
+      "title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+      "doc_type": "clinical_note",
+      "date": "2025-03-14",
+      "n_chunks": 9
+    },
+    {
+      "doc_id": "note_002",
+      "title": "Hospital Discharge Summary - Acute on Chronic Systolic Heart Failure",
+      "doc_type": "clinical_note",
+      "date": "2025-03-07",
+      "n_chunks": 10
+    },
+    {
+      "doc_id": "note_003",
+      "title": "Annual Wellness Visit - Preventive Care",
+      "doc_type": "clinical_note",
+      "date": "2025-02-20",
+      "n_chunks": 8
+    },
+    {
+      "doc_id": "note_004",
+      "title": "Telehealth Visit Note - Joint Pain Evaluation",
+      "doc_type": "clinical_note",
+      "date": "2025-04-02",
+      "n_chunks": 7
+    },
+    {
+      "doc_id": "policy_001",
+      "title": "Risk Adjustment Documentation Requirements (Mock Payer Policy RA-100)",
+      "doc_type": "payer_policy",
+      "date": "2025-01-01",
+      "n_chunks": 8
+    },
+    {
+      "doc_id": "policy_002",
+      "title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+      "doc_type": "payer_policy",
+      "date": "2025-01-01",
+      "n_chunks": 6
+    }
+  ],
+  "search": {
+    "status_code": 200,
+    "passes_gate": true,
+    "chunk_ids": [
+      "policy_002#c02",
+      "note_004#c01",
+      "note_004#c06",
+      "policy_002#c04",
+      "note_004#c00"
+    ]
+  },
+  "query_hcc": {
+    "status_code": 200,
+    "request_id": "a6a24790d10c4b54",
+    "wall_ms": 5698,
+    "answer_status": "answered",
+    "confidence": 1.0,
+    "band": "high",
+    "needs_human_review": false,
+    "citations": [
+      [
+        "guideline_002#c03",
+        true
+      ],
+      [
+        "note_001#c06",
+        true
+      ],
+      [
+        "note_001#c06",
+        true
+      ]
+    ],
+    "tools": [
+      "icd10_lookup",
+      "icd10_lookup"
+    ],
+    "trace_keys": [
+      "agent_latency_ms",
+      "cache_hit",
+      "confidence_factors",
+      "est_cost_usd",
+      "fault_injected",
+      "forced_final",
+      "index_fingerprint",
+      "llm_calls",
+      "model",
+      "prompt_version",
+      "reasoning_summary",
+      "repair_attempts",
+      "request_id",
+      "retrieval",
+      "total_latency_ms",
+      "usage",
+      "validation_errors"
+    ],
+    "answer": "The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitus with diabetic chronic kidney disease) and E11.42 (Type 2 diabetes mellitus with diabetic polyneuropathy), both map to "
+  },
+  "query_gate_refusal": {
+    "status_code": 200,
+    "request_id": "9d626c04f70b483d",
+    "wall_ms": 17,
+    "answer_status": "insufficient_context",
+    "confidence": 0.0,
+    "band": "low",
+    "needs_human_review": true,
+    "citations": [],
+    "tools": [],
+    "trace_keys": [
+      "cache_hit",
+      "gate_reason",
+      "index_fingerprint",
+      "model",
+      "prompt_version",
+      "request_id",
+      "retrieval",
+      "total_latency_ms"
+    ],
+    "answer": ""
+  },
+  "query_scoped_no_trace": {
+    "status_code": 200,
+    "request_id": "df26fe33e4744749",
+    "wall_ms": 2238,
+    "answer_status": "answered",
+    "confidence": 0.784,
+    "band": "medium",
+    "needs_human_review": true,
+    "citations": [
+      [
+        "policy_002#c02",
+        true
+      ]
+    ],
+    "tools": [],
+    "trace_keys": [
+      "cache_hit",
+      "confidence_factors",
+      "est_cost_usd",
+      "index_fingerprint",
+      "llm_calls",
+      "model",
+      "prompt_version",
+      "repair_attempts",
+      "request_id",
+      "total_latency_ms",
+      "usage"
+    ],
+    "answer": "Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted. Diagnoses documented during audio-only visits must be recaptured at a qu"
+  },
+  "query_blank_400": {
+    "status_code": 400,
+    "request_id": "483fb3aa1fc94744",
+    "wall_ms": 2,
+    "detail": "query must not be empty"
+  },
+  "streamlit_health": "ok"
+}

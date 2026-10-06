@@ -1,0 +1,571 @@
+{
+  "generated_at": "2026-09-29T16:19:19+00:00",
+  "model": "gpt-4o-mini",
+  "fault": "",
+  "runs": [
+    {
+      "prompt_version": "v3",
+      "label": "recent_a1c",
+      "query": "What was Jane Doe-Test's most recent HbA1c, and what was the prior value?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.435,
+        "best_bm25": 8.75,
+        "chunk_ids": [
+          "note_001#c00",
+          "note_001#c01",
+          "note_001#c02",
+          "note_001#c03",
+          "note_001#c04",
+          "note_001#c05",
+          "note_001#c06",
+          "note_001#c07",
+          "note_001#c08",
+          "guideline_001#c04",
+          "policy_001#c00",
+          "policy_002#c03",
+          "guideline_002#c02",
+          "policy_002#c00"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "answered",
+      "answer": "Jane Doe-Test's most recent HbA1c is 8.2%, and the prior value was 7.6%.",
+      "self_reported_confidence": 1.0,
+      "missing_information": [],
+      "reasoning_summary": "The most recent and prior HbA1c values were extracted from the clinical note sections detailing laboratory results and history of present illness.",
+      "citations": [
+        {
+          "chunk_id": "note_001#c05",
+          "evidence": "HbA1c 8.2% (collected 2025-03-12).",
+          "doc_id": "note_001",
+          "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+          "section": "Laboratory Results",
+          "date": "2025-03-14",
+          "verified": true
+        },
+        {
+          "chunk_id": "note_001#c03",
+          "evidence": "Her prior HbA1c in January 2025 was 7.6%.",
+          "doc_id": "note_001",
+          "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+          "section": "History of Present Illness",
+          "date": "2025-03-14",
+          "verified": true
+        }
+      ],
+      "tool_calls": [],
+      "repair_attempts": 0,
+      "validation_errors": [],
+      "fault_injected": false,
+      "llm_calls": 1,
+      "usage": {
+        "prompt_tokens": 3327,
+        "completion_tokens": 155
+      },
+      "est_cost_usd": 0.00059205,
+      "latency_ms": 4219.9,
+      "raw_outputs": [
+        "{\"answer\":\"Jane Doe-Test's most recent HbA1c is 8.2%, and the prior value was 7.6%.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"note_001#c05\",\"evidence\":\"HbA1c 8.2% (collected 2025-03-12).\"},{\"chunk_id\":\"note_001#c03\",\"evidence\":\"Her prior HbA1c in January 2025 was 7.6%.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The most recent and prior HbA1c values were extracted from the clinical note sections detailing laboratory results and history of present illness.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v3",
+      "label": "hcc_mapping",
+      "query": "Which HCC category do the diabetes codes documented for Jane Doe-Test map to?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.655,
+        "best_bm25": 16.96,
+        "chunk_ids": [
+          "note_001#c00",
+          "note_001#c01",
+          "note_001#c02",
+          "note_001#c03",
+          "note_001#c04",
+          "note_001#c05",
+          "note_001#c06",
+          "note_001#c07",
+          "note_001#c08",
+          "guideline_002#c03",
+          "guideline_002#c05",
+          "guideline_002#c00",
+          "guideline_001#c03",
+          "guideline_001#c06"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "answered",
+      "answer": "The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitus with diabetic chronic kidney disease) and E11.42 (Type 2 diabetes mellitus with diabetic polyneuropathy), both map to the HCC category of \"Diabetes with Chronic Complications.\"",
+      "self_reported_confidence": 1.0,
+      "missing_information": [],
+      "reasoning_summary": "The diabetes codes E11.22 and E11.42 were confirmed to map to the HCC category of \"Diabetes with Chronic Complications\" based on the provided guidelines and ICD-10 lookups.",
+      "citations": [
+        {
+          "chunk_id": "guideline_002#c03",
+          "evidence": "Diabetes with chronic complications (for example E11.22 type 2 diabetes with diabetic chronic kidney disease, and E11.42 type 2 diabetes with diabetic polyneuropathy) maps to the diabetes-with-complications category.",
+          "doc_id": "guideline_002",
+          "doc_title": "HCC Hierarchy Reference for Diabetes, Kidney Disease, and Heart Failure (Mock Internal Guideline CG-02)",
+          "section": "3. Diabetes Hierarchy (illustrative)",
+          "date": "",
+          "verified": true
+        },
+        {
+          "chunk_id": "note_001#c06",
+          "evidence": "1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.",
+          "doc_id": "note_001",
+          "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+          "section": "Assessment",
+          "date": "2025-03-14",
+          "verified": true
+        },
+        {
+          "chunk_id": "note_001#c06",
+          "evidence": "3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.",
+          "doc_id": "note_001",
+          "doc_title": "Endocrinology Progress Note - Type 2 Diabetes Follow-up",
+          "section": "Assessment",
+          "date": "2025-03-14",
+          "verified": true
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "icd10_lookup",
+          "arguments": {
+            "query": "E11.22"
+          },
+          "result": {
+            "query": "E11.22",
+            "found": true,
+            "match_type": "code",
+            "code": "E11.22",
+            "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+            "hcc_category": "Diabetes with Chronic Complications",
+            "hcc_hierarchy": "Diabetes",
+            "severity_rank": 2,
+            "matches": [
+              {
+                "code": "E11.22",
+                "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+                "hcc_category": "Diabetes with Chronic Complications",
+                "hcc_hierarchy": "Diabetes",
+                "severity_rank": 2
+              }
+            ],
+            "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+          },
+          "error": null,
+          "latency_ms": 1.75,
+          "timed_out": false
+        },
+        {
+          "name": "icd10_lookup",
+          "arguments": {
+            "query": "E11.42"
+          },
+          "result": {
+            "query": "E11.42",
+            "found": true,
+            "match_type": "code",
+            "code": "E11.42",
+            "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+            "hcc_category": "Diabetes with Chronic Complications",
+            "hcc_hierarchy": "Diabetes",
+            "severity_rank": 2,
+            "matches": [
+              {
+                "code": "E11.42",
+                "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+                "hcc_category": "Diabetes with Chronic Complications",
+                "hcc_hierarchy": "Diabetes",
+                "severity_rank": 2
+              }
+            ],
+            "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+          },
+          "error": null,
+          "latency_ms": 0.21,
+          "timed_out": false
+        }
+      ],
+      "repair_attempts": 0,
+      "validation_errors": [],
+      "fault_injected": false,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 6991,
+        "completion_tokens": 374
+      },
+      "est_cost_usd": 0.00127305,
+      "latency_ms": 4627.1,
+      "raw_outputs": [
+        "{\"answer\":\"The diabetes codes documented for Jane Doe-Test, E11.22 (Type 2 diabetes mellitus with diabetic chronic kidney disease) and E11.42 (Type 2 diabetes mellitus with diabetic polyneuropathy), both map to the HCC category of \\\"Diabetes with Chronic Complications.\\\"\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"guideline_002#c03\",\"evidence\":\"Diabetes with chronic complications (for example E11.22 type 2 diabetes with diabetic chronic kidney disease, and E11.42 type 2 diabetes with diabetic polyneuropathy) maps to the diabetes-with-complications category.\"},{\"chunk_id\":\"note_001#c06\",\"evidence\":\"1. Type 2 diabetes mellitus with diabetic chronic kidney disease (E11.22). Glycemic control has worsened since January (HbA1c 7.6% to 8.2%). The chronic kidney disease is attributed to diabetes based on the long-standing diabetes, persistent albuminuria, and absence of any other identified cause.\"},{\"chunk_id\":\"note_001#c06\",\"evidence\":\"3. Type 2 diabetes mellitus with diabetic polyneuropathy (E11.42). Symptoms stable.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The diabetes codes E11.22 and E11.42 were confirmed to map to the HCC category of \\\"Diabetes with Chronic Complications\\\" based on the provided guidelines and ICD-10 lookups.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v3",
+      "label": "los_and_eligibility",
+      "query": "How many days was John Q. Testpatient hospitalized, and was he eligible for coverage on the discharge date?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.521,
+        "best_bm25": 14.63,
+        "chunk_ids": [
+          "note_002#c00",
+          "note_002#c01",
+          "note_002#c02",
+          "note_002#c03",
+          "note_002#c04",
+          "note_002#c05",
+          "note_002#c06",
+          "note_002#c07",
+          "note_002#c08",
+          "note_002#c09",
+          "policy_002#c03",
+          "policy_002#c05",
+          "policy_002#c04",
+          "note_003#c04",
+          "guideline_001#c02"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "answered",
+      "answer": "John Q. Testpatient was hospitalized for 5 days, from March 2, 2025, to March 7, 2025. He was eligible for coverage on the discharge date, as his status was ACTIVE on that date.",
+      "self_reported_confidence": 1.0,
+      "missing_information": [],
+      "reasoning_summary": "The length of hospitalization was calculated using the admission and discharge dates, and eligibility was confirmed as active on the discharge date.",
+      "citations": [
+        {
+          "chunk_id": "note_002#c01",
+          "evidence": "Admitted 2025-03-02. Discharged 2025-03-07.",
+          "doc_id": "note_002",
+          "doc_title": "Hospital Discharge Summary - Acute on Chronic Systolic Heart Failure",
+          "section": "Patient Information",
+          "date": "2025-03-07",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_002#c05",
+          "evidence": "For inpatient stays, the date of service for eligibility purposes is the discharge date.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "5. Inpatient Encounters",
+          "date": "2025-01-01",
+          "verified": true
+        },
+        {
+          "chunk_id": "policy_002#c03",
+          "evidence": "The response must show coverage status ACTIVE for that date.",
+          "doc_id": "policy_002",
+          "doc_title": "Telehealth Acceptability and Member Eligibility Verification (Mock Payer Policy RA-110)",
+          "section": "3. Member Eligibility Verification",
+          "date": "2025-01-01",
+          "verified": true
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "days_between",
+          "arguments": {
+            "start_date": "2025-03-02",
+            "end_date": "2025-03-07"
+          },
+          "result": {
+            "start_date": "2025-03-02",
+            "end_date": "2025-03-07",
+            "days": 5
+          },
+          "error": null,
+          "latency_ms": 0.08,
+          "timed_out": false
+        },
+        {
+          "name": "check_eligibility",
+          "arguments": {
+            "member_id": "M-TEST-1002",
+            "date_of_service": "2025-03-07"
+          },
+          "result": {
+            "member_id": "M-TEST-1002",
+            "date_of_service": "2025-03-07",
+            "checked_at": "2026-09-29T16:19:01+00:00",
+            "status": "ACTIVE",
+            "plan": "Example Health Plan Medicare Advantage PPO",
+            "coverage_start": "2023-01-01",
+            "coverage_end": "2025-12-31",
+            "termination_type": null,
+            "note": "Coverage active on the date of service."
+          },
+          "error": null,
+          "latency_ms": 0.07,
+          "timed_out": false
+        }
+      ],
+      "repair_attempts": 0,
+      "validation_errors": [],
+      "fault_injected": false,
+      "llm_calls": 2,
+      "usage": {
+        "prompt_tokens": 7407,
+        "completion_tokens": 277
+      },
+      "est_cost_usd": 0.00127725,
+      "latency_ms": 3594.3,
+      "raw_outputs": [
+        "{\"answer\":\"John Q. Testpatient was hospitalized for 5 days, from March 2, 2025, to March 7, 2025. He was eligible for coverage on the discharge date, as his status was ACTIVE on that date.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"note_002#c01\",\"evidence\":\"Admitted 2025-03-02. Discharged 2025-03-07.\"},{\"chunk_id\":\"policy_002#c05\",\"evidence\":\"For inpatient stays, the date of service for eligibility purposes is the discharge date.\"},{\"chunk_id\":\"policy_002#c03\",\"evidence\":\"The response must show coverage status ACTIVE for that date.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The length of hospitalization was calculated using the admission and discharge dates, and eligibility was confirmed as active on the discharge date.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v3",
+      "label": "telehealth_submittable",
+      "query": "Can the telehealth visit for Robert Nonreal be submitted for risk adjustment?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.572,
+        "best_bm25": 11.42,
+        "chunk_ids": [
+          "note_004#c00",
+          "note_004#c01",
+          "note_004#c02",
+          "note_004#c03",
+          "note_004#c04",
+          "note_004#c05",
+          "note_004#c06",
+          "policy_002#c02",
+          "policy_002#c04",
+          "policy_001#c06",
+          "policy_002#c01",
+          "policy_001#c01"
+        ]
+      },
+      "outcome": "unrepaired",
+      "answer_status": null,
+      "answer": null,
+      "self_reported_confidence": null,
+      "missing_information": null,
+      "reasoning_summary": null,
+      "citations": [],
+      "tool_calls": [
+        {
+          "name": "check_eligibility",
+          "arguments": {
+            "member_id": "M-TEST-1004",
+            "date_of_service": "2025-04-02"
+          },
+          "result": {
+            "member_id": "M-TEST-1004",
+            "date_of_service": "2025-04-02",
+            "checked_at": "2026-09-29T16:19:05+00:00",
+            "status": "INACTIVE",
+            "plan": "Example Health Plan Medicare Advantage HMO",
+            "coverage_start": "2024-06-01",
+            "coverage_end": "2025-03-31",
+            "termination_type": "retroactive",
+            "note": "Coverage not active on the date of service. Coverage was terminated retroactively effective 2025-03-31 (processed 2025-04-15)."
+          },
+          "error": null,
+          "latency_ms": 0.3,
+          "timed_out": false
+        },
+        {
+          "name": "icd10_lookup",
+          "arguments": {
+            "query": "M25.50"
+          },
+          "result": {
+            "query": "M25.50",
+            "found": true,
+            "match_type": "code",
+            "code": "M25.50",
+            "description": "Pain in unspecified joint",
+            "hcc_category": null,
+            "hcc_hierarchy": null,
+            "severity_rank": null,
+            "matches": [
+              {
+                "code": "M25.50",
+                "description": "Pain in unspecified joint",
+                "hcc_category": null,
+                "hcc_hierarchy": null,
+                "severity_rank": null
+              }
+            ],
+            "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+          },
+          "error": null,
+          "latency_ms": 0.37,
+          "timed_out": false
+        },
+        {
+          "name": "icd10_lookup",
+          "arguments": {
+            "query": "possible rheumatoid arthritis"
+          },
+          "result": {
+            "query": "possible rheumatoid arthritis",
+            "found": false,
+            "match_type": null,
+            "code": null,
+            "description": null,
+            "hcc_category": null,
+            "hcc_hierarchy": null,
+            "severity_rank": null,
+            "matches": [],
+            "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+          },
+          "error": null,
+          "latency_ms": 0.33,
+          "timed_out": false
+        },
+        {
+          "name": "icd10_lookup",
+          "arguments": {
+            "query": "rheumatoid arthritis"
+          },
+          "result": {
+            "query": "rheumatoid arthritis",
+            "found": true,
+            "match_type": "term",
+            "code": null,
+            "description": null,
+            "hcc_category": null,
+            "hcc_hierarchy": null,
+            "severity_rank": null,
+            "matches": [
+              {
+                "code": "M06.9",
+                "description": "Rheumatoid arthritis, unspecified",
+                "hcc_category": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease",
+                "hcc_hierarchy": "Inflammatory Arthritis",
+                "severity_rank": 1
+              },
+              {
+                "code": "M05.79",
+                "description": "Rheumatoid arthritis with rheumatoid factor of multiple sites without organ or systems involvement",
+                "hcc_category": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease",
+                "hcc_hierarchy": "Inflammatory Arthritis",
+                "severity_rank": 1
+              }
+            ],
+            "note": "Illustrative mapping for a technical exercise; not a real HCC crosswalk. Confirm against the official code set."
+          },
+          "error": null,
+          "latency_ms": 0.13,
+          "timed_out": false
+        }
+      ],
+      "repair_attempts": 2,
+      "validation_errors": [
+        "citations[5] evidence is not a verbatim quote from policy_002#c04: 'Coverage not active on the date of service.'. Copy the supporting sentence exactly as it appears in that chunk."
+      ],
+      "fault_injected": false,
+      "llm_calls": 7,
+      "usage": {
+        "prompt_tokens": 24569,
+        "completion_tokens": 1124
+      },
+      "est_cost_usd": 0.00435975,
+      "latency_ms": 13133.7,
+      "raw_outputs": [
+        "{\"answer\":\"The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because it was conducted via audio-only (telephone), which is not acceptable for risk adjustment submission according to the payer policy. Additionally, the member's coverage was inactive on the date of service, as it terminated retroactively effective March 31, 2025, prior to the visit on April 2, 2025.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.\"},{\"chunk_id\":\"note_004#c01\",\"evidence\":\"Member ID: M-TEST-1004.\"},{\"chunk_id\":\"note_004#c01\",\"evidence\":\"Verbal consent to telehealth obtained.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"A telehealth encounter is acceptable for risk adjustment only when it uses real-time interactive audio and video technology between the member and an acceptable provider.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"Coverage not active on the date of service. Coverage was terminated retroactively effective 2025-03-31.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The answer is based on the payer policy stating that audio-only encounters are not acceptable for risk adjustment and the member's coverage status being inactive on the date of service.\"}",
+        "{\"answer\":\"The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because it was conducted via audio-only (telephone), which is not acceptable for risk adjustment submission according to the payer policy. Additionally, the member's coverage was inactive on the date of service, as it was terminated retroactively effective March 31, 2025, prior to the visit on April 2, 2025.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"A telehealth encounter is acceptable for risk adjustment only when it uses real-time interactive audio and video technology between the member and an acceptable provider.\"},{\"chunk_id\":\"note_004#c01\",\"evidence\":\"Member ID: M-TEST-1004.\"},{\"chunk_id\":\"note_004#c01\",\"evidence\":\"Verbal consent to telehealth obtained.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.\"},{\"chunk_id\":\"policy_002#c04\",\"evidence\":\"Coverage not active on the date of service. Coverage was terminated retroactively effective 2025-03-31.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The answer is based on the payer policy stating that audio-only encounters are not acceptable for risk adjustment and the member's coverage status being inactive on the date of service.\"}",
+        "{\"answer\":\"The telehealth visit for Robert Nonreal cannot be submitted for risk adjustment because it was conducted via audio-only (telephone), which is not acceptable for risk adjustment submission according to the payer policy. Additionally, the member's coverage was inactive on the date of service, as it was terminated retroactively effective March 31, 2025, prior to the visit on April 2, 2025.\",\"answer_status\":\"answered\",\"citations\":[{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"Audio-only (telephone) encounters are not acceptable for risk adjustment submission, regardless of whether video was attempted.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"A telehealth encounter is acceptable for risk adjustment only when it uses real-time interactive audio and video technology between the member and an acceptable provider.\"},{\"chunk_id\":\"note_004#c01\",\"evidence\":\"Member ID: M-TEST-1004.\"},{\"chunk_id\":\"note_004#c01\",\"evidence\":\"Verbal consent to telehealth obtained.\"},{\"chunk_id\":\"policy_002#c02\",\"evidence\":\"The note must document the modality used (audio-video or audio-only), the location of the member and of the provider, and the member's consent to telehealth.\"},{\"chunk_id\":\"policy_002#c04\",\"evidence\":\"Coverage not active on the date of service.\"}],\"missing_information\":[],\"self_reported_confidence\":1,\"reasoning_summary\":\"The answer is based on the payer policy stating that audio-only encounters are not acceptable for risk adjustment and the member's coverage status being inactive on the date of service.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v3",
+      "label": "canary_parametric",
+      "query": "What metformin dose is recommended for patients with CKD stage 3?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.478,
+        "best_bm25": 12.08,
+        "chunk_ids": [
+          "guideline_002#c04",
+          "note_001#c07",
+          "note_002#c05",
+          "note_001#c03",
+          "note_001#c06"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "insufficient_context",
+      "answer": "",
+      "self_reported_confidence": 0.5,
+      "missing_information": [
+        "Specific guidelines or recommendations for metformin dosing in patients with CKD stage 3 are not provided in the context."
+      ],
+      "reasoning_summary": "The context does not contain specific dosing recommendations for metformin in patients with CKD stage 3.",
+      "citations": [],
+      "tool_calls": [],
+      "repair_attempts": 0,
+      "validation_errors": [],
+      "fault_injected": false,
+      "llm_calls": 1,
+      "usage": {
+        "prompt_tokens": 2617,
+        "completion_tokens": 82
+      },
+      "est_cost_usd": 0.00044175,
+      "latency_ms": 1357.2,
+      "raw_outputs": [
+        "{\"answer\":\"\",\"answer_status\":\"insufficient_context\",\"citations\":[],\"missing_information\":[\"Specific guidelines or recommendations for metformin dosing in patients with CKD stage 3 are not provided in the context.\"],\"self_reported_confidence\":0.5,\"reasoning_summary\":\"The context does not contain specific dosing recommendations for metformin in patients with CKD stage 3.\"}"
+      ]
+    },
+    {
+      "prompt_version": "v3",
+      "label": "missing_fact",
+      "query": "What blood pressure medication is Maria Fictitious taking?",
+      "retrieval": {
+        "passes_gate": true,
+        "gate_reason": "ok",
+        "best_dense": 0.379,
+        "best_bm25": 9.45,
+        "chunk_ids": [
+          "note_003#c00",
+          "note_003#c01",
+          "note_003#c02",
+          "note_003#c03",
+          "note_003#c04",
+          "note_003#c05",
+          "note_003#c06",
+          "note_003#c07",
+          "note_001#c04",
+          "note_001#c03",
+          "note_001#c07",
+          "note_004#c05",
+          "policy_001#c04"
+        ]
+      },
+      "outcome": "ok",
+      "answer_status": "insufficient_context",
+      "answer": "",
+      "self_reported_confidence": 0.0,
+      "missing_information": [
+        "There is no information in the context regarding any blood pressure medication that Maria Fictitious is taking."
+      ],
+      "reasoning_summary": "The context does not provide any details about blood pressure medications for Maria Fictitious.",
+      "citations": [],
+      "tool_calls": [],
+      "repair_attempts": 0,
+      "validation_errors": [],
+      "fault_injected": false,
+      "llm_calls": 1,
+      "usage": {
+        "prompt_tokens": 3146,
+        "completion_tokens": 76
+      },
+      "est_cost_usd": 0.0005175,
+      "latency_ms": 1194.3,
+      "raw_outputs": [
+        "{\"answer\":\"\",\"answer_status\":\"insufficient_context\",\"citations\":[],\"missing_information\":[\"There is no information in the context regarding any blood pressure medication that Maria Fictitious is taking.\"],\"self_reported_confidence\":0.0,\"reasoning_summary\":\"The context does not provide any details about blood pressure medications for Maria Fictitious.\"}"
+      ]
+    }
+  ]
+}
